@@ -4,18 +4,19 @@ import { useState } from "react";
 import Link from "next/link";
 import { RoadmapInput, RoadmapOutput } from "@/types/roadmap";
 import { DOMAIN_TOOLKITS, TECH_ECOSYSTEMS, COMMON_ROLES, CONSTRAINT_CATEGORIES } from "@/constants/domains";
-import { Loader2, ArrowRight, ArrowLeft, Check, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 interface RoadmapFormProps {
     onSuccess: (data: RoadmapOutput) => void;
+    onStartGeneration?: (goal: string) => void;
 }
 
-export default function RoadmapForm({ onSuccess }: RoadmapFormProps) {
+export default function RoadmapForm({ onSuccess, onStartGeneration }: RoadmapFormProps) {
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState<Partial<RoadmapInput>>({
         skills: [],
         constraints: [],
-        location: "Kenya",
+        location: "Global",
         hours_per_week: 10,
         timeframe_months: 3,
         current_status: "student",
@@ -31,6 +32,9 @@ export default function RoadmapForm({ onSuccess }: RoadmapFormProps) {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        if (onStartGeneration) {
+            onStartGeneration(formData.target_role || "Career Path");
+        }
         setLoading(true);
         setError(null);
         try {
@@ -50,7 +54,7 @@ export default function RoadmapForm({ onSuccess }: RoadmapFormProps) {
 
             const data = await response.json();
             onSuccess(data);
-        } catch (error: any) {
+        } catch (error: unknown) {
             console.error("Error generating roadmap:", error);
             setError(error.message || "An unexpected error occurred. Please try again.");
         } finally {
@@ -116,11 +120,26 @@ export default function RoadmapForm({ onSuccess }: RoadmapFormProps) {
                             <select
                                 className="w-full bg-white/5 p-6 rounded-3xl border border-white/5 focus:border-white/20 outline-none transition-all appearance-none cursor-pointer text-sm font-medium"
                                 value={formData.current_status}
-                                onChange={e => setFormData({ ...formData, current_status: e.target.value as any })}
+                                onChange={e => setFormData({ ...formData, current_status: e.target.value })}
                             >
                                 <option value="student" className="bg-[#0a0a0a] text-white">Academic Track - Current Student</option>
                                 <option value="graduate" className="bg-[#0a0a0a] text-white">Specialized Graduate - Recent Graduate</option>
                                 <option value="junior dev" className="bg-[#0a0a0a] text-white">Field Engineer - Junior Professional</option>
+                            </select>
+                        </FormGroup>
+                        <FormGroup label="Location">
+                            <select
+                                className="w-full bg-white/5 p-6 rounded-3xl border border-white/5 focus:border-white/20 outline-none transition-all appearance-none cursor-pointer text-sm font-medium"
+                                value={formData.location}
+                                onChange={e => setFormData({ ...formData, location: e.target.value })}
+                            >
+                                <option value="Global" className="bg-[#0a0a0a] text-white">Global</option>
+                                <option value="North America" className="bg-[#0a0a0a] text-white">North America</option>
+                                <option value="Europe" className="bg-[#0a0a0a] text-white">Europe</option>
+                                <option value="Asia" className="bg-[#0a0a0a] text-white">Asia</option>
+                                <option value="Africa" className="bg-[#0a0a0a] text-white">Africa</option>
+                                <option value="South America" className="bg-[#0a0a0a] text-white">South America</option>
+                                <option value="Australia" className="bg-[#0a0a0a] text-white">Australia</option>
                             </select>
                         </FormGroup>
                         <FormGroup label="Primary Domain">
@@ -154,9 +173,9 @@ export default function RoadmapForm({ onSuccess }: RoadmapFormProps) {
                                                     {suggestion}
                                                 </button>
                                             ))}
-                                    </div>
-                                )}
-                            </div>
+                                                                 </div>
+                                                             )}
+        </div>
                         </FormGroup>
 
                         <div className="flex justify-center -mt-6 mb-2">
@@ -164,7 +183,7 @@ export default function RoadmapForm({ onSuccess }: RoadmapFormProps) {
                                 href="/domains"
                                 className="text-[10px] font-medium text-slate-500 hover:text-primary transition-colors border-b border-transparent hover:border-primary/50 pb-0.5"
                             >
-                                Don't know where to start? <span className="text-slate-300">Explore the Domain Matrix</span>
+                                Don&apos;t know where to start? <span className="text-slate-300">Explore the Domain Matrix</span>
                             </Link>
                         </div>
 
@@ -397,24 +416,10 @@ export default function RoadmapForm({ onSuccess }: RoadmapFormProps) {
                                                                         }}
                                                                     />
                                                                 </div>
-                                                            )}
-                                                        </div>
-                                                    );
-                                                })}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </FormGroup>
-                            <div className="flex gap-6 pt-10">
-                                <button type="button" onClick={prevStep} className="flex-1 glass-pill py-6 rounded-full font-bold text-[11px] uppercase tracking-widest text-slate-300 hover:text-white transition-colors">Back</button>
-                                <button type="submit" className="flex-[2] bg-white text-black py-6 rounded-full font-black text-[11px] uppercase tracking-widest hover:bg-slate-200 transition-all active:scale-95 shadow-2xl shadow-white/5">Analyze Strategy</button>
-                            </div>
-                        </div>
-                    )
-                }
-            </form >
-        </div >
+                                                             )}
+        </div>
+    </form>
+
     );
 }
 

@@ -11,7 +11,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Kazira | AI Career Path KE",
+  title: "Kazira | AI Career Stylist for Kenya",
   description: "Personalized AI career roadmaps for Kenyan developers",
 };
 
@@ -25,24 +25,23 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-black text-white relative overflow-x-hidden">
         {/* Top Floating Pill Nav */}
         <header className="fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl z-50 flex items-center justify-between">
-          <div className="flex items-center gap-2 pl-4">
-            <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black font-black text-xs">C</div>
-            <span className="font-bold tracking-tighter text-lg hidden sm:block">Kazira</span>
-          </div>
+          <Link href="/" className="text-3xl font-black text-white hover:text-primary transition-colors tracking-tighter">
+            KAZIRA
+          </Link>
 
-          <nav className="glass-pill rounded-full px-8 py-3 flex items-center gap-8 text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <Link href="/roadmap" className="hover:text-white transition-colors">Build</Link>
-            <Link href="/jobs" className="hover:text-white transition-colors">Jobs</Link>
-            <Link href="/history" className="hover:text-white transition-colors">History</Link>
-            <div className="w-px h-3 bg-white/10 mx-2"></div>
-            <Link href="/faq" className="hover:text-white transition-colors">FAQ</Link>
-            <Link href="/about" className="hover:text-white transition-colors">About</Link>
-            <Link href="/pricing" className="hover:text-white transition-colors text-accent">Pricing</Link>
+          <nav className="glass-pill rounded-full px-8 py-3 flex items-center gap-6 text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400">
+            <Link href="/" className="hover:text-white transition-colors">The Agent</Link>
+            <Link href="/roadmap" className="hover:text-white transition-colors">Orcestrator</Link>
+            <Link href="/jobs" className="hover:text-white transition-colors">Market</Link>
+            <div className="w-px h-3 bg-white/10"></div>
+            <Link href="/faq" className="hover:text-white transition-colors">How it works</Link>
+            <Link href="/about" className="hover:text-white transition-colors">Project</Link>
           </nav>
 
           <div className="flex items-center gap-4 pr-4">
-            <Link href="/roadmap" className="text-[10px] font-bold text-white hover:opacity-80 transition-opacity uppercase tracking-[0.2em]">Generate</Link>
+            <Link href="/roadmap" className="bg-white text-black px-6 py-2.5 rounded-full text-[9px] font-black uppercase tracking-[0.2em] hover:bg-slate-200 transition-all active:scale-95">
+              Deploy Agent
+            </Link>
           </div>
         </header>
 

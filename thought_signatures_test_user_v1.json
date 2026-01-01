@@ -1,0 +1,52 @@
+[
+    {
+        "step": "RESEARCH_COMPLETE",
+        "metadata": {
+            "jobs_analyzed": 7
+        },
+        "timestamp": "2026-01-01T13:30:40.939299",
+        "global_state": "RESEARCHING"
+    },
+    {
+        "step": "PLAN_GENERATED",
+        "metadata": {
+            "milestones": 2
+        },
+        "timestamp": "2026-01-01T13:30:44.074086",
+        "global_state": "PLANNING"
+    },
+    {
+        "step": "EXECUTION_COMPLETE",
+        "metadata": {
+            "resources_found": 2,
+            "daily_tasks": 1
+        },
+        "timestamp": "2026-01-01T13:30:53.120433",
+        "global_state": "EXECUTING"
+    },
+    {
+        "step": "VERIFICATION_COMPLETE",
+        "metadata": {
+            "quiz_ready": true,
+            "interview_ready": true
+        },
+        "timestamp": "2026-01-01T13:30:59.260639",
+        "global_state": "VERIFYING"
+    },
+    {
+        "step": "ROADMAP_ADJUSTED",
+        "metadata": {
+            "recommendation": "Stay the course."
+        },
+        "timestamp": "2026-01-01T13:31:02.452543",
+        "global_state": "ADJUSTING"
+    },
+    {
+        "step": "PIPELINE_COMPLETE",
+        "metadata": {
+            "status": "success"
+        },
+        "timestamp": "2026-01-01T13:31:02.454556",
+        "global_state": "COMPLETED"
+    }
+]

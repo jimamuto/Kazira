@@ -1,0 +1,35 @@
+[
+    {
+        "step": "RESEARCH_COMPLETE",
+        "metadata": {
+            "jobs_analyzed": 5
+        },
+        "timestamp": "2026-01-01T16:08:19.657059",
+        "global_state": "RESEARCHING"
+    },
+    {
+        "step": "PLAN_GENERATED",
+        "metadata": {
+            "milestones": 0
+        },
+        "timestamp": "2026-01-01T16:08:20.072044",
+        "global_state": "PLANNING"
+    },
+    {
+        "step": "EXECUTION_COMPLETE",
+        "metadata": {
+            "resources_found": 0,
+            "daily_tasks": 0
+        },
+        "timestamp": "2026-01-01T16:08:21.001687",
+        "global_state": "EXECUTING"
+    },
+    {
+        "step": "FAILURE_LOG",
+        "metadata": {
+            "error": "list index out of range"
+        },
+        "timestamp": "2026-01-01T16:08:21.003709",
+        "global_state": "FAILED"
+    }
+]

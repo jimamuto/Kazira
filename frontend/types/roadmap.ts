@@ -5,6 +5,7 @@ export interface RoadmapResource {
     cost: "Free" | "Paid";
     description?: string;
     is_local: boolean;
+    thumbnail_url?: string;
 }
 
 export interface RoadmapMonth {
@@ -17,10 +18,32 @@ export interface RoadmapMonth {
     resources: RoadmapResource[];
 }
 
+export interface DailyTask {
+    day: string;
+    topic: string;
+    duration_min: number;
+    reminder_text: string;
+}
+
+export interface ExecutionSprint {
+    week_number: number;
+    milestone_title: string;
+    days: DailyTask[];
+    focus_area: string;
+}
+
+export interface ExecutionSchedule {
+    sprints: ExecutionSprint[];
+    active_sprint_index: number;
+}
+
 export interface RoadmapOutput {
     summary: string;
     months: RoadmapMonth[];
     additional_info?: string;
+    execution_schedule?: ExecutionSchedule;
+    target_role: string;
+    hours_per_week: number;
 }
 
 export interface RoadmapInput {

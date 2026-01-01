@@ -1,9 +1,30 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 export default function AnimatedBackground() {
     const [mounted, setMounted] = useState(false);
+
+    // Generate random values once to avoid React purity violations
+    const [shootingStarStyles] = useState(() =>
+        [...Array(8)].map(() => ({
+            top: `${Math.random() * 80}%`,
+            left: `${Math.random() * -20}%`,
+            width: `${Math.random() * 200 + 100}px`,
+            animationDelay: `${Math.random() * 5}s`,
+            animationDuration: `${Math.random() * 3 + 2}s`,
+        }))
+    );
+
+    const [rainDropStyles] = useState(() =>
+        [...Array(15)].map(() => ({
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            height: `${Math.random() * 100 + 50}px`,
+            animationDelay: `${Math.random() * 5}s`,
+            animationDuration: `${Math.random() * 10 + 5}s`,
+        }))
+    );
 
     useEffect(() => {
         setMounted(true);
@@ -25,32 +46,22 @@ export default function AnimatedBackground() {
 
             {/* 4. Shooting Data Streams (Flashy Elements) */}
             <div className="absolute inset-0">
-                {[...Array(8)].map((_, i) => (
+                {shootingStarStyles.map((style, i) => (
                     <div
                         key={i}
                         className="absolute h-[1px] bg-gradient-to-r from-transparent via-accent to-transparent animate-shooting-star"
                         style={{
-                            top: `${Math.random() * 80}%`,
-                            left: `${Math.random() * -20}%`,
-                            width: `${Math.random() * 200 + 100}px`,
-                            animationDelay: `${Math.random() * 5}s`,
-                            animationDuration: `${Math.random() * 3 + 2}s`,
+                            ...style,
                             opacity: 0,
                         }}
                     ></div>
                 ))}
                 {/* Vertical Rain/Data Drops */}
-                {[...Array(15)].map((_, i) => (
+                {rainDropStyles.map((style, i) => (
                     <div
                         key={`rain-${i}`}
                         className="absolute w-[1px] bg-gradient-to-b from-transparent via-white/20 to-transparent animate-float-slow"
-                        style={{
-                            top: `${Math.random() * 100}%`,
-                            left: `${Math.random() * 100}%`,
-                            height: `${Math.random() * 100 + 50}px`,
-                            animationDelay: `${Math.random() * 5}s`,
-                            animationDuration: `${Math.random() * 10 + 5}s`,
-                        }}
+                        style={style}
                     ></div>
                 ))}
             </div>

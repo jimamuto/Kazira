@@ -8,12 +8,12 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
                     {/* Brand Column */}
                     <div className="space-y-6">
-                        <div className="flex items-center gap-2">
-                            <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black font-black text-xs">K</div>
-                            <span className="font-bold tracking-tighter text-lg text-white">Kazira</span>
+                        <div className="flex items-center gap-3">
+                            <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-white font-black text-sm shadow-lg shadow-primary/20">K</div>
+                            <span className="font-bold tracking-tighter text-xl text-white">Kazira</span>
                         </div>
-                        <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
-                            Precision career strategy for the Silicon Savannah. Built for developers who want to stop guessing.
+                        <p className="text-slate-500 text-sm leading-relaxed max-w-xs font-light">
+                            The Silicon Savannah's first autonomous career engine. Powered by Gemini, driven by your ambition.
                         </p>
                         <div className="flex gap-4">
                             <SocialIcon icon={<Twitter className="w-4 h-4" />} href="#" />
@@ -24,12 +24,12 @@ export default function Footer() {
 
                     {/* Product Column */}
                     <div>
-                        <h4 className="text-xs font-bold uppercase tracking-widest text-white mb-6">Platform</h4>
+                        <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 mb-8">Intelligence</h4>
                         <ul className="space-y-4">
-                            <FooterLink href="/roadmap" label="Roadmap Builder" />
-                            <FooterLink href="/domains" label="Domain Matrix" />
-                            <FooterLink href="/jobs" label="Job Board" />
-                            <FooterLink href="/pricing" label="Pricing" />
+                            <FooterLink href="/roadmap" label="Agent Workspace" />
+                            <FooterLink href="/jobs" label="Market Pulse" />
+                            <FooterLink href="/history" label="Thought Archive" />
+                            <FooterLink href="/pricing" label="Reserve Capacity" />
                         </ul>
                     </div>
 
@@ -62,11 +62,11 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600">
-                        © 2024 Kazira Inc. Nairobi, KE.
+                        © 2026 Kazira Inc. | Nairobi, Kenya
                     </p>
-                    <div className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-                        <span className="text-[10px] font-mono text-slate-500">Systems Operational</span>
+                    <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/5 border border-emerald-500/10">
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                        <span className="text-[9px] font-bold uppercase tracking-widest text-emerald-500">All Agents Operational</span>
                     </div>
                 </div>
             </div>

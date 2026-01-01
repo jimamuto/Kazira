@@ -1,36 +1,41 @@
 "use client";
 
 import { useState } from "react";
-import RoadmapForm from "@/components/RoadmapForm";
 import RoadmapView from "@/components/RoadmapView";
 import { RoadmapOutput } from "@/types/roadmap";
+import NewOrchestrator from "@/components/NewOrchestrator";
+import ExecutionView from "@/components/ExecutionView";
 
 export default function RoadmapPage() {
     const [roadmap, setRoadmap] = useState<RoadmapOutput | null>(null);
+    const [view, setView] = useState<"PLAN" | "EXECUTION">("PLAN");
 
     const handleSuccess = (data: RoadmapOutput) => {
         setRoadmap(data);
+        setView("PLAN");
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
     const handleReset = () => {
         setRoadmap(null);
+        setView("PLAN");
     };
 
     return (
         <div className="py-12 sm:py-20 px-4">
             {!roadmap ? (
-                <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-12">
-                        <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Your AI Career Blueprint</h1>
-                        <p className="text-slate-500 max-w-xl mx-auto">
-                            Fill out the form below to receive a customized learning path optimized for the Kenyan tech ecosystem.
-                        </p>
-                    </div>
-                    <RoadmapForm onSuccess={handleSuccess} />
-                </div>
+                <NewOrchestrator onSuccess={handleSuccess} />
+            ) : view === "PLAN" ? (
+                <RoadmapView
+                    roadmap={roadmap}
+                    onReset={handleReset}
+                    onLaunchExecution={() => setView("EXECUTION")}
+                />
             ) : (
-                <RoadmapView roadmap={roadmap} onReset={handleReset} />
+                <ExecutionView
+                    roadmap={roadmap}
+                    onBack={() => setView("PLAN")}
+                />
             )}
         </div>
     );
