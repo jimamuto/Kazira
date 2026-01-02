@@ -1,4 +1,4 @@
-from sqlmodel import Session, select, col
+from sqlmodel import select, col
 from app.core.db import get_session
 from app.models.roadmap import AgentState, ThoughtSignature, MarathonSession, JobListing, UserProgress, MarketPrediction
 from typing import List, Dict, Any, Optional, Union
@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 class DatabaseService:
     """
     PostgreSQL persistence service for Marathon Agent.
-    
+
     Replaces file-based thought signatures with database storage.
     Enables:
     - Resume capability
@@ -16,10 +16,10 @@ class DatabaseService:
     - Historical analysis
     - Data persistence for judges
     """
-    
+
     def __init__(self, user_id: str):
         self.user_id = user_id
-    
+
     async def save_agent_state(
         self,
         agent_name: str,
@@ -30,14 +30,15 @@ class DatabaseService:
         Saves current agent state to database.
         """
         try:
-            with next(get_session()) as session:
+            async for session in get_session():
                 # Check for existing state
-                existing = session.exec(
+                result = await session.exec(
                     select(AgentState)
                     .where(AgentState.user_id == self.user_id)
                     .where(AgentState.agent_name == agent_name)
-                ).first()
-                
+                )
+                existing = result.first()
+
                 if existing:
                     # Update existing
                     existing.state = state
@@ -52,26 +53,28 @@ class DatabaseService:
                         checkpoint_data=checkpoint_data
                     )
                     session.add(agent_state)
-                
-                session.commit()
+
+                await session.commit()
                 logging.info(f"[DB] Saved state for {agent_name}: {state}")
-                
+                break
+
         except Exception as e:
             logging.error(f"[DB] Failed to save agent state: {e}")
-    
+
     async def load_agent_state(self, agent_name: str) -> Optional[Dict[str, Any]]:
         """
         Loads current agent state from database.
         """
         try:
-            with next(get_session()) as session:
-                state = session.exec(
+            async for session in get_session():
+                result = await session.exec(
                     select(AgentState)
                     .where(AgentState.user_id == self.user_id)
                     .where(AgentState.agent_name == agent_name)
                     .order_by(col(AgentState.timestamp).desc())
-                ).first()
-                
+                )
+                state = result.first()
+
                 if state:
                     return {
                         "state": state.state,
@@ -79,11 +82,11 @@ class DatabaseService:
                         "timestamp": state.timestamp.isoformat()
                     }
                 return None
-                
+
         except Exception as e:
             logging.error(f"[DB] Failed to load agent state: {e}")
             return None
-    
+
     async def save_thought_signature(
         self,
         step: str,
@@ -94,7 +97,7 @@ class DatabaseService:
         Saves thought signature to database (replaces file-based approach).
         """
         try:
-            with next(get_session()) as session:
+            async for session in get_session():
                 signature = ThoughtSignature(
                     user_id=self.user_id,
                     step=step,
@@ -102,40 +105,42 @@ class DatabaseService:
                     thought_metadata=metadata
                 )
                 session.add(signature)
-                session.commit()
+                await session.commit()
                 logging.info(f"[DB] Saved thought signature: {step}")
-                
+                break
+
         except Exception as e:
             logging.error(f"[DB] Failed to save thought signature: {e}")
-    
+
     async def load_recent_signatures(self, limit: int = 50) -> List[Dict[str, Any]]:
         """
         Loads recent thought signatures for display/analysis.
         """
         try:
-            with next(get_session()) as session:
-                signatures = session.exec(
+            async for session in get_session():
+                result = await session.exec(
                     select(ThoughtSignature)
                     .where(ThoughtSignature.user_id == self.user_id)
                     .order_by(col(ThoughtSignature.timestamp).desc())
                     .limit(limit)
-                ).all()
-                
-                result = []
+                )
+                signatures = result.all()
+
+                output = []
                 for sig in signatures:
-                    result.append({
+                    output.append({
                         "step": sig.step,
                         "global_state": sig.global_state,
                         "metadata": sig.metadata,
                         "timestamp": sig.timestamp.isoformat()
                     })
-                
-                return result
-                
+
+                return output
+
         except Exception as e:
             logging.error(f"[DB] Failed to load signatures: {e}")
             return []
-    
+
     async def start_marathon_session(
         self,
         career_goal: str,
@@ -146,7 +151,7 @@ class DatabaseService:
         Returns session ID.
         """
         try:
-            with next(get_session()) as session:
+            async for session in get_session():
                 marathon_session = MarathonSession(
                     user_id=self.user_id,
                     career_goal=career_goal,
@@ -154,15 +159,15 @@ class DatabaseService:
                     status="RUNNING"
                 )
                 session.add(marathon_session)
-                session.commit()
-                session.refresh(marathon_session)
+                await session.commit()
+                await session.refresh(marathon_session)
                 logging.info(f"[DB] Started marathon session {marathon_session.id}")
-                return marathon_session.id or -1
-                
+                return marathon_session.id if marathon_session.id else -1
+
         except Exception as e:
             logging.error(f"[DB] Failed to start session: {e}")
             return -1
-    
+
     async def end_marathon_session(
         self,
         session_id: int,
@@ -174,19 +179,19 @@ class DatabaseService:
         Marks marathon session as ended.
         """
         try:
-            with next(get_session()) as session:
-                marathon_session = session.get(MarathonSession, session_id)
+            async for session in get_session():
+                marathon_session = await session.get(MarathonSession, session_id)
                 if marathon_session:
                     marathon_session.ended_at = datetime.utcnow()
                     marathon_session.cycle_count = cycle_count
                     marathon_session.status = status
                     marathon_session.final_summary = final_summary
-                    session.commit()
+                    await session.commit()
                     logging.info(f"[DB] Ended marathon session {session_id}: {status}")
-                
+
         except Exception as e:
             logging.error(f"[DB] Failed to end session: {e}")
-    
+
     async def save_job_listings(
         self,
         listings: List[Dict[str, Any]],
@@ -196,15 +201,16 @@ class DatabaseService:
         Saves scraped job listings to avoid re-scraping.
         """
         try:
-            with next(get_session()) as session:
+            async for session in get_session():
                 saved_count = 0
                 for job_data in listings:
                     # Check for duplicates
-                    existing = session.exec(
+                    result = await session.exec(
                         select(JobListing)
                         .where(JobListing.link == job_data.get("link", ""))
-                    ).first()
-                    
+                    )
+                    existing = result.first()
+
                     if not existing:
                         # Create with validation
                         job_listing = JobListing(
@@ -218,13 +224,13 @@ class DatabaseService:
                         )
                         session.add(job_listing)
                         saved_count += 1
-                
-                session.commit()
+
+                await session.commit()
                 logging.info(f"[DB] Saved {saved_count} job listings from {source}")
-                
+
         except Exception as e:
             logging.error(f"[DB] Failed to save job listings: {e}")
-    
+
     async def load_recent_jobs(
         self,
         days: int = 1
@@ -233,19 +239,20 @@ class DatabaseService:
         Loads recent job listings from database.
         """
         try:
-            with next(get_session()) as session:
+            async for session in get_session():
                 cutoff_date = datetime.utcnow() - timedelta(days=days)
-                
-                jobs = session.exec(
+
+                result = await session.exec(
                     select(JobListing)
                     .where(JobListing.scraped_at >= cutoff_date)
                     .order_by(col(JobListing.scraped_at).desc())
                     .limit(100)
-                ).all()
-                
-                result = []
+                )
+                jobs = result.all()
+
+                output = []
                 for job in jobs:
-                    result.append({
+                    output.append({
                         "id": job.id,
                         "title": job.title,
                         "company": job.company,
@@ -256,13 +263,13 @@ class DatabaseService:
                         "skills": job.skills_extracted,
                         "scraped_at": job.scraped_at.isoformat()
                     })
-                
-                return result
-                
+
+                return output
+
         except Exception as e:
             logging.error(f"[DB] Failed to load jobs: {e}")
             return []
-    
+
     async def update_user_progress(
         self,
         roadmap_id: Optional[int],
@@ -273,13 +280,14 @@ class DatabaseService:
         Updates user progress through roadmap.
         """
         try:
-            with next(get_session()) as session:
+            async for session in get_session():
                 # Get or create progress record
-                progress = session.exec(
+                result = await session.exec(
                     select(UserProgress)
                     .where(UserProgress.user_id == self.user_id)
-                ).first()
-                
+                )
+                progress = result.first()
+
                 if progress:
                     # Update existing
                     progress.last_updated = datetime.utcnow()
@@ -298,25 +306,26 @@ class DatabaseService:
                         verification_attempts=1
                     )
                     session.add(progress)
-                
-                session.commit()
+
+                await session.commit()
                 logging.info(f"[DB] Updated user progress")
-                
+
         except Exception as e:
             logging.error(f"[DB] Failed to update progress: {e}")
-    
+
     async def load_user_progress(self) -> Optional[Dict[str, Any]]:
         """
         Loads user progress from database.
         """
         try:
-            with next(get_session()) as session:
-                progress = session.exec(
+            async for session in get_session():
+                result = await session.exec(
                     select(UserProgress)
                     .where(UserProgress.user_id == self.user_id)
                     .order_by(col(UserProgress.last_updated).desc())
-                ).first()
-                
+                )
+                progress = result.first()
+
                 if progress:
                     return {
                         "roadmap_id": progress.roadmap_id,
@@ -326,7 +335,7 @@ class DatabaseService:
                         "last_updated": progress.last_updated.isoformat()
                     }
                 return None
-                
+
         except Exception as e:
             logging.error(f"[DB] Failed to load progress: {e}")
             return None
@@ -346,7 +355,7 @@ class DatabaseService:
         EXTRAORDINARY FEATURE: Saves market prediction results from Gemini 3.
         """
         try:
-            with next(get_session()) as session:
+            async for session in get_session():
                 prediction = MarketPrediction(
                     career_goal=career_goal,
                     location=location,
@@ -358,8 +367,8 @@ class DatabaseService:
                     data_points_analyzed=data_points_analyzed
                 )
                 session.add(prediction)
-                session.commit()
-                session.refresh(prediction)
+                await session.commit()
+                await session.refresh(prediction)
                 logging.info(f"[DB] Saved market prediction for {career_goal}")
                 return prediction.id
 
@@ -373,8 +382,8 @@ class DatabaseService:
         Returns None if expired or not found.
         """
         try:
-            with next(get_session()) as session:
-                prediction = session.exec(
+            async for session in get_session():
+                result = await session.exec(
                     select(MarketPrediction)
                     .where(
                         MarketPrediction.career_goal == career_goal,
@@ -382,7 +391,8 @@ class DatabaseService:
                         MarketPrediction.expires_at > datetime.utcnow()
                     )
                     .order_by(col(MarketPrediction.generated_at).desc())
-                ).first()
+                )
+                prediction = result.first()
 
                 if prediction:
                     return {

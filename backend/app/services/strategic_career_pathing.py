@@ -113,7 +113,7 @@ class StrategicCareerPathing:
             Return ONLY valid JSON array of career stages.
             """
 
-            response = gemini_client.model.generate_content(
+            response = await gemini_client.generate_content(
                 path_prompt,
                 generation_config={"response_mime_type": "application/json"}
             )

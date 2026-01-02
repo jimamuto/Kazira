@@ -86,7 +86,7 @@ export default function FAQ() {
                         <div className="group">
                             <h3 className="text-3xl font-medium text-white mb-6 group-hover:text-primary transition-colors">What technologies power Kazira?</h3>
                             <p className="text-slate-400 leading-relaxed max-w-3xl">
-                                Built with Next.js, FastAPI, and SQLModel for the full-stack architecture. Gemini 3 Flash provides the AI orchestration with 1M token context windows. Selenium and BeautifulSoup handle real-time job scraping from LinkedIn, Indeed, and global job boards.
+                                Built with Next.js, FastAPI, and SQLModel for the full-stack architecture. Gemini 3.0 Flash Preview provides the AI orchestration with 1M token context windows. Selenium and BeautifulSoup handle real-time job scraping from LinkedIn, Indeed, and global job boards.
                             </p>
                         </div>
                     </div>

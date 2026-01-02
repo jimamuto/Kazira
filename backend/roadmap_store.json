@@ -1,0 +1,2369 @@
+{
+  "ea527af7-8a9d-44e8-a430-e89bb0dbd028": {
+    "summary": "Marathon Session Active: Searching for ai engineering in Kenya...",
+    "target_role": "ai engineering",
+    "location": "Kenya",
+    "months": [],
+    "additional_info": "Agent is running (Time-to-Live: 72 hours). checks: Monitor Mission Control for live updates.",
+    "result_id": "ea527af7-8a9d-44e8-a430-e89bb0dbd028",
+    "created_at": "2026-01-02T00:06:54.580373"
+  },
+  "991f485c-9b0c-479d-809d-919b2422e016": {
+    "summary": "Marathon Session Active: Searching for ai engineering in Kenya...",
+    "target_role": "ai engineering",
+    "location": "Kenya",
+    "months": [],
+    "additional_info": "Agent is running (Time-to-Live: 72 hours). checks: Monitor Mission Control for live updates.",
+    "result_id": "991f485c-9b0c-479d-809d-919b2422e016",
+    "created_at": "2026-01-02T00:10:20.773053"
+  },
+  "bf09850d-9a24-4630-b7e5-08fa855f324e": {
+    "summary": "A 6-month personalized roadmap to become a ai engineering. Starting from your current level, you'll build practical skills through structured learning and hands-on projects.",
+    "months": [
+      {
+        "month": 1,
+        "title": "Month 1: Foundation",
+        "skills": [
+          "python",
+          "sql"
+        ],
+        "tasks": [
+          "Complete 5 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 1",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 1\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "title": "Month 2: Development",
+        "skills": [
+          "python",
+          "sql"
+        ],
+        "tasks": [
+          "Complete 10 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 2",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 2\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 3,
+        "title": "Month 3: Projects",
+        "skills": [
+          "python",
+          "sql"
+        ],
+        "tasks": [
+          "Complete 15 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 3",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 3\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 4,
+        "title": "Month 4: Advanced",
+        "skills": [
+          "python",
+          "sql"
+        ],
+        "tasks": [
+          "Complete 20 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 4",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 4\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 5,
+        "title": "Month 5: Advanced",
+        "skills": [
+          "python",
+          "sql"
+        ],
+        "tasks": [
+          "Complete 25 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 5",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 5\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 6,
+        "title": "Month 6: Advanced",
+        "skills": [
+          "python",
+          "sql"
+        ],
+        "tasks": [
+          "Complete 30 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 6",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 6\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      }
+    ],
+    "additional_info": "Focus on consistent daily practice. Your background in python, sql will help accelerate your learning. Join Kenya tech communities for networking and mentorship.",
+    "execution_schedule": null,
+    "result_id": "bf09850d-9a24-4630-b7e5-08fa855f324e",
+    "created_at": "2026-01-02T00:20:29.797231"
+  },
+  "95f83dd1-a5d4-493c-ad43-ce3855c59fd8": {
+    "summary": "A 6-month personalized roadmap to become a ai product manager. Starting from your current level, you'll build practical skills through structured learning and hands-on projects.",
+    "months": [
+      {
+        "month": 1,
+        "title": "Month 1: Foundation",
+        "skills": [
+          "python",
+          "javascript",
+          "sql",
+          "mongodb",
+          "c++"
+        ],
+        "tasks": [
+          "Complete 5 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 1",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 1\n\n**Goal**: Build your skills as ai product manager\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "title": "Month 2: Development",
+        "skills": [
+          "python",
+          "javascript",
+          "sql",
+          "mongodb",
+          "c++"
+        ],
+        "tasks": [
+          "Complete 10 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 2",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 2\n\n**Goal**: Build your skills as ai product manager\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 3,
+        "title": "Month 3: Projects",
+        "skills": [
+          "python",
+          "javascript",
+          "sql",
+          "mongodb",
+          "c++"
+        ],
+        "tasks": [
+          "Complete 15 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 3",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 3\n\n**Goal**: Build your skills as ai product manager\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 4,
+        "title": "Month 4: Advanced",
+        "skills": [
+          "python",
+          "javascript",
+          "sql",
+          "mongodb",
+          "c++"
+        ],
+        "tasks": [
+          "Complete 20 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 4",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 4\n\n**Goal**: Build your skills as ai product manager\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 5,
+        "title": "Month 5: Advanced",
+        "skills": [
+          "python",
+          "javascript",
+          "sql",
+          "mongodb",
+          "c++"
+        ],
+        "tasks": [
+          "Complete 25 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 5",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 5\n\n**Goal**: Build your skills as ai product manager\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 6,
+        "title": "Month 6: Advanced",
+        "skills": [
+          "python",
+          "javascript",
+          "sql",
+          "mongodb",
+          "c++"
+        ],
+        "tasks": [
+          "Complete 30 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 6",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 6\n\n**Goal**: Build your skills as ai product manager\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      }
+    ],
+    "additional_info": "Focus on consistent daily practice. Your background in python, javascript, sql, mongodb, c++, java will help accelerate your learning. Join Kenya tech communities for networking and mentorship.",
+    "execution_schedule": null,
+    "result_id": "95f83dd1-a5d4-493c-ad43-ce3855c59fd8",
+    "created_at": "2026-01-02T00:21:22.135538"
+  },
+  "cde09cf9-0863-4147-8a9a-192b9da7b204": {
+    "summary": "A 6-month personalized roadmap to become a ai engineering. Starting from your current level, you'll build practical skills through structured learning and hands-on projects.",
+    "months": [
+      {
+        "month": 1,
+        "title": "Month 1: Foundation",
+        "skills": [
+          "python"
+        ],
+        "tasks": [
+          "Complete 5 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 1",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 1\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "title": "Month 2: Development",
+        "skills": [
+          "python"
+        ],
+        "tasks": [
+          "Complete 10 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 2",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 2\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 3,
+        "title": "Month 3: Projects",
+        "skills": [
+          "python"
+        ],
+        "tasks": [
+          "Complete 15 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 3",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 3\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 4,
+        "title": "Month 4: Advanced",
+        "skills": [
+          "python"
+        ],
+        "tasks": [
+          "Complete 20 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 4",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 4\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 5,
+        "title": "Month 5: Advanced",
+        "skills": [
+          "python"
+        ],
+        "tasks": [
+          "Complete 25 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 5",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 5\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 6,
+        "title": "Month 6: Advanced",
+        "skills": [
+          "python"
+        ],
+        "tasks": [
+          "Complete 30 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 6",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 6\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      }
+    ],
+    "additional_info": "Focus on consistent daily practice. Your background in python will help accelerate your learning. Join Kenya tech communities for networking and mentorship.",
+    "execution_schedule": null,
+    "result_id": "cde09cf9-0863-4147-8a9a-192b9da7b204",
+    "created_at": "2026-01-02T00:24:27.619734"
+  },
+  "045807a4-709a-4c67-ac7d-a070b7533721": {
+    "summary": "A 6-month personalized roadmap to become a ai engineering. Starting from your current level, you'll build practical skills through structured learning and hands-on projects.",
+    "months": [
+      {
+        "month": 1,
+        "title": "Month 1: Foundation",
+        "skills": [
+          "python",
+          "java"
+        ],
+        "tasks": [
+          "Complete 5 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 1",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 1\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "title": "Month 2: Development",
+        "skills": [
+          "python",
+          "java"
+        ],
+        "tasks": [
+          "Complete 10 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 2",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 2\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 3,
+        "title": "Month 3: Projects",
+        "skills": [
+          "python",
+          "java"
+        ],
+        "tasks": [
+          "Complete 15 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 3",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 3\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 4,
+        "title": "Month 4: Advanced",
+        "skills": [
+          "python",
+          "java"
+        ],
+        "tasks": [
+          "Complete 20 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 4",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 4\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 5,
+        "title": "Month 5: Advanced",
+        "skills": [
+          "python",
+          "java"
+        ],
+        "tasks": [
+          "Complete 25 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 5",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 5\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 6,
+        "title": "Month 6: Advanced",
+        "skills": [
+          "python",
+          "java"
+        ],
+        "tasks": [
+          "Complete 30 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 6",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 6\n\n**Goal**: Build your skills as ai engineering\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      }
+    ],
+    "additional_info": "Focus on consistent daily practice. Your background in python, java will help accelerate your learning. Join Kenya tech communities for networking and mentorship.",
+    "execution_schedule": null,
+    "result_id": "045807a4-709a-4c67-ac7d-a070b7533721",
+    "created_at": "2026-01-02T15:44:36.867804"
+  },
+  "a06375a8-089f-4193-b0af-ec83e5a990a9": {
+    "summary": "A 6-month personalized roadmap to become a ai engineer. Starting from your current level, you'll build practical skills through structured learning and hands-on projects.",
+    "months": [
+      {
+        "month": 1,
+        "title": "Month 1: Foundation",
+        "skills": [
+          "Computer Vision",
+          "Csharp",
+          "GO",
+          "Javascript",
+          "Machine Learning"
+        ],
+        "tasks": [
+          "Complete 5 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 1",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 1\n\n**Goal**: Build your skills as ai engineer\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "title": "Month 2: Development",
+        "skills": [
+          "Computer Vision",
+          "Csharp",
+          "GO",
+          "Javascript",
+          "Machine Learning"
+        ],
+        "tasks": [
+          "Complete 10 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 2",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 2\n\n**Goal**: Build your skills as ai engineer\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 3,
+        "title": "Month 3: Projects",
+        "skills": [
+          "Computer Vision",
+          "Csharp",
+          "GO",
+          "Javascript",
+          "Machine Learning"
+        ],
+        "tasks": [
+          "Complete 15 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 3",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 3\n\n**Goal**: Build your skills as ai engineer\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 4,
+        "title": "Month 4: Advanced",
+        "skills": [
+          "Computer Vision",
+          "Csharp",
+          "GO",
+          "Javascript",
+          "Machine Learning"
+        ],
+        "tasks": [
+          "Complete 20 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 4",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 4\n\n**Goal**: Build your skills as ai engineer\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 5,
+        "title": "Month 5: Advanced",
+        "skills": [
+          "Computer Vision",
+          "Csharp",
+          "GO",
+          "Javascript",
+          "Machine Learning"
+        ],
+        "tasks": [
+          "Complete 25 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 5",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 5\n\n**Goal**: Build your skills as ai engineer\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 6,
+        "title": "Month 6: Advanced",
+        "skills": [
+          "Computer Vision",
+          "Csharp",
+          "GO",
+          "Javascript",
+          "Machine Learning"
+        ],
+        "tasks": [
+          "Complete 30 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 6",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 6\n\n**Goal**: Build your skills as ai engineer\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      }
+    ],
+    "additional_info": "Focus on consistent daily practice. Your background in Computer Vision, Csharp, GO, Javascript, Machine Learning, Python, R, Typescript will help accelerate your learning. Join Kenya tech communities for networking and mentorship.",
+    "execution_schedule": null,
+    "result_id": "a06375a8-089f-4193-b0af-ec83e5a990a9",
+    "created_at": "2026-01-02T16:01:02.116588"
+  },
+  "e2f36b35-1c11-4ddb-814c-5a67615d7fbb": {
+    "summary": "A 3-month personalized roadmap to become a AI Engineer. Starting from your current level, you'll build practical skills through structured learning and hands-on projects.",
+    "months": [
+      {
+        "month": 1,
+        "title": "Month 1: Foundation",
+        "skills": [
+          "Python",
+          "JavaScript"
+        ],
+        "tasks": [
+          "Complete 5 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 1",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 1\n\n**Goal**: Build your skills as AI Engineer\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "title": "Month 2: Development",
+        "skills": [
+          "Python",
+          "JavaScript"
+        ],
+        "tasks": [
+          "Complete 10 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 2",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 2\n\n**Goal**: Build your skills as AI Engineer\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 3,
+        "title": "Month 3: Projects",
+        "skills": [
+          "Python",
+          "JavaScript"
+        ],
+        "tasks": [
+          "Complete 15 hours of learning",
+          "Build practice exercise",
+          "Study documentation",
+          "Join coding community"
+        ],
+        "projects": [
+          "Project 3",
+          "Portfolio",
+          "Practice App"
+        ],
+        "detailed_guide": "## Month 3\n\n**Goal**: Build your skills as AI Engineer\n\n**Weekly Plan**:\n- Week 1-2: Core concepts\n- Week 3-4: Hands-on practice\n\n**Actions**:\n1. Set up development environment\n2. Follow structured learning path\n3. Build small projects\n4. Document your progress\n\n**Tips**:\n- Code daily, even if just 1 hour\n- Join Kenya tech communities\n- Network with other learners",
+        "resources": [
+          {
+            "name": "FreeCodeCamp",
+            "url": "https://freecodecamp.org",
+            "type": "course",
+            "cost": "Free",
+            "description": "Full curriculum",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Docs",
+            "url": "https://developer.mozilla.org",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Reference docs",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      }
+    ],
+    "additional_info": "Focus on consistent daily practice. Your background in Python, JavaScript will help accelerate your learning. Join Kenya tech communities for networking and mentorship.",
+    "execution_schedule": null,
+    "result_id": "e2f36b35-1c11-4ddb-814c-5a67615d7fbb",
+    "created_at": "2026-01-02T16:09:15.680514"
+  },
+  "10c68d7c-87b6-466a-833c-8cc04a276fef": {
+    "summary": "This 2-month roadmap is designed to elevate a Junior Python Developer in Nairobi to a mid-level Software Engineer. It focuses on mastering the 'Silicon Savannah' tech stack: Advanced Python, FastAPI/Django, PostgreSQL, and basic DevOps, with a specific focus on Fintech and SaaS integration common in the Kenyan market.",
+    "months": [
+      {
+        "month": 1,
+        "title": "Month 1: Advanced Backend & Scalable Architecture",
+        "skills": [
+          "Asynchronous Programming",
+          "PostgreSQL & Optimization",
+          "FastAPI",
+          "System Design Basics",
+          "M-Pesa Daraja API Integration"
+        ],
+        "tasks": [
+          "Master Python Type Hinting and Pydantic models",
+          "Implement JWT-based authentication",
+          "Optimize SQL queries and understand indexing",
+          "Build a RESTful API with documentation using Swagger/OpenAPI"
+        ],
+        "projects": [
+          "E-commerce Backend with M-Pesa Integration: A robust API that handles product catalogs, secure checkout, and real-time payment callbacks using Daraja."
+        ],
+        "detailed_guide": "### Week 1: Deep Dive into Python & FastAPI\nFocus on `asyncio`, decorators, and context managers. Transition from Flask/Django to FastAPI for performance. \n\n### Week 2: Database Mastery\nLearn PostgreSQL specifically. Understand relational mapping (SQLAlchemy), migrations (Alembic), and how to write raw SQL for performance-critical tasks.\n\n### Week 3: Integration & Payments\nIn Nairobi, Fintech is king. Study the Safaricom Daraja API documentation. Implement C2B and B2C flows.\n\n### Week 4: System Design & Testing\nLearn about Load Balancers, Caching (Redis), and write unit tests using `pytest`. Aim for >80% coverage.",
+        "resources": [
+          {
+            "name": "FastAPI Official Documentation",
+            "url": "https://fastapi.tiangolo.com/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "The best resource for learning modern Python web development.",
+            "is_local": false,
+            "thumbnail_url": "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png"
+          },
+          {
+            "name": "Safaricom Daraja Portal",
+            "url": "https://developer.safaricom.co.ke/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Essential for any developer in Kenya to understand mobile money integration.",
+            "is_local": true,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Python Nairobi Community",
+            "url": "https://twitter.com/pythonnairobi",
+            "type": "community",
+            "cost": "Free",
+            "description": "Local user group for networking and technical talks.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "title": "Month 2: Frontend, DevOps & Career Positioning",
+        "skills": [
+          "React.js Foundation",
+          "Docker & Containerization",
+          "CI/CD (GitHub Actions)",
+          "AWS/DigitalOcean Deployment",
+          "Technical Interview Prep"
+        ],
+        "tasks": [
+          "Containerize a Python application using Docker",
+          "Set up a CI/CD pipeline for automated testing and deployment",
+          "Build a basic React dashboard to consume your Month 1 API",
+          "Optimize LinkedIn profile for the Nairobi tech market"
+        ],
+        "projects": [
+          "Full-Stack Inventory Management System: A containerized application with a React frontend, Python backend, and automated deployment to a cloud provider."
+        ],
+        "detailed_guide": "### Week 5: React for Backend Developers\nDon't aim for UI/UX mastery; focus on state management (Hooks) and fetching data from your Python APIs.\n\n### Week 6: Docker & DevOps\nLearn to write Dockerfiles and use Docker Compose. Understand the 'Twelve-Factor App' methodology.\n\n### Week 7: Deployment & Cloud\nDeploy your project to a VPS like DigitalOcean or AWS. Set up a custom domain and SSL (Let's Encrypt).\n\n### Week 8: Networking & Soft Skills\nUpdate your CV to highlight 'Software Engineer' rather than 'Junior'. Practice LeetCode (Easy/Medium) and reach out to recruiters at local firms like Safaricom, Equity, and local startups.",
+        "resources": [
+          {
+            "name": "Full Stack Open",
+            "url": "https://fullstackopen.com/en/",
+            "type": "course",
+            "cost": "Free",
+            "description": "Comprehensive guide to React and modern web development.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "iHub Nairobi",
+            "url": "https://ihub.co.ke/",
+            "type": "community",
+            "cost": "Paid",
+            "description": "The heart of the Nairobi tech scene for co-working and networking events.",
+            "is_local": true,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Docker Curriculum",
+            "url": "https://docker-curriculum.com/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "A beginner-friendly guide to Docker.",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      }
+    ],
+    "additional_info": "In Nairobi, networking is as important as coding. Attend 'Nairobi Tech Week' or meetups at iHub and Gearbox. When applying, emphasize your ability to integrate local payment solutions and your understanding of cloud deployment, as these are highly sought-after skills in the local SaaS and Fintech sectors.",
+    "execution_schedule": null,
+    "result_id": "10c68d7c-87b6-466a-833c-8cc04a276fef",
+    "created_at": "2026-01-02T16:09:40.699483"
+  },
+  "f75f98de-ea39-4a77-859b-357c1f220f26": {
+    "summary": "This 6-month roadmap transforms a Python beginner into a job-ready AI Engineer specifically tailored for the Kenyan tech ecosystem. It balances mathematical foundations, core machine learning, deep learning, and MLOps, with a heavy focus on local industry needs like Fintech and Agriculture.",
+    "months": [
+      {
+        "month": 1,
+        "title": "Mathematics & Data Foundations",
+        "skills": [
+          "NumPy",
+          "Pandas",
+          "Linear Algebra",
+          "Calculus",
+          "Statistics"
+        ],
+        "tasks": [
+          "Master Vector and Matrix operations",
+          "Learn Exploratory Data Analysis (EDA)",
+          "Understand Probability Distributions",
+          "Practice Data Cleaning techniques"
+        ],
+        "projects": [
+          "Nairobi Real Estate EDA: Analyze and visualize price trends in different Nairobi suburbs using scraped data."
+        ],
+        "detailed_guide": "### Week 1: Linear Algebra & Calculus\nFocus on matrices, eigenvalues, and gradients which are the backbone of backpropagation.\n### Week 2: Statistics & Probability\nLearn about mean, median, standard deviation, and Bayesian probability.\n### Week 3: NumPy & Pandas\nMaster data manipulation. Practice joining, merging, and pivoting datasets.\n### Week 4: Data Visualization\nUse Matplotlib and Seaborn to tell stories with data.",
+        "resources": [
+          {
+            "name": "Khan Academy: Multivariable Calculus",
+            "url": "https://www.khanacademy.org/math/multivariable-calculus",
+            "type": "course",
+            "cost": "Free",
+            "description": "Essential math for understanding how models learn.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "AI Kenya Community",
+            "url": "https://aikenya.ke/",
+            "type": "community",
+            "cost": "Free",
+            "description": "The primary hub for AI enthusiasts in Kenya. Join their Slack/Discord.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "title": "Classical Machine Learning",
+        "skills": [
+          "Scikit-Learn",
+          "Supervised Learning",
+          "Unsupervised Learning",
+          "Model Evaluation"
+        ],
+        "tasks": [
+          "Implement Linear and Logistic Regression",
+          "Build Decision Trees and Random Forests",
+          "Understand Bias-Variance Tradeoff",
+          "Learn K-Means Clustering"
+        ],
+        "projects": [
+          "M-Pesa Churn Predictor: Build a model to predict which customers might stop using a mobile money service based on transaction patterns."
+        ],
+        "detailed_guide": "### Week 1: Supervised Learning (Regression)\nFocus on predicting continuous values.\n### Week 2: Supervised Learning (Classification)\nFocus on binary and multi-class classification.\n### Week 3: Unsupervised Learning\nLearn clustering and dimensionality reduction (PCA).\n### Week 4: Model Tuning\nLearn Hyperparameter optimization using GridSearch and Cross-Validation.",
+        "resources": [
+          {
+            "name": "Zindi Africa",
+            "url": "https://zindi.africa/",
+            "type": "community",
+            "cost": "Free",
+            "description": "The largest African data science competition platform. Great for local datasets.",
+            "is_local": true,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Scikit-Learn Documentation",
+            "url": "https://scikit-learn.org/stable/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Industry standard library for classical ML.",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 3,
+        "title": "Deep Learning Fundamentals",
+        "skills": [
+          "PyTorch",
+          "Neural Networks",
+          "Backpropagation",
+          "Computer Vision Basics"
+        ],
+        "tasks": [
+          "Build a multi-layer perceptron from scratch",
+          "Learn about Activation Functions (ReLU, Sigmoid)",
+          "Understand Convolutional Neural Networks (CNNs)",
+          "Practice using GPU acceleration (Google Colab)"
+        ],
+        "projects": [
+          "Maize Disease Classifier: Create a CNN that identifies diseases in maize leaves from images, a high-value use case for Kenyan agritech."
+        ],
+        "detailed_guide": "### Week 1: Introduction to PyTorch\nTensors, Autograd, and the PyTorch ecosystem.\n### Week 2: Building Neural Networks\nDesigning architectures and loss functions.\n### Week 3: Computer Vision\nImplementing CNNs for image classification.\n### Week 4: Transfer Learning\nUsing pre-trained models like ResNet to solve local problems with small datasets.",
+        "resources": [
+          {
+            "name": "DeepLearning.AI (Andrew Ng)",
+            "url": "https://www.coursera.org/specializations/deep-learning",
+            "type": "course",
+            "cost": "Paid",
+            "description": "The gold standard for learning Deep Learning theory.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Data Science East Africa",
+            "url": "https://www.meetup.com/datascienceea/",
+            "type": "community",
+            "cost": "Free",
+            "description": "Meetup group for networking with local practitioners.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 4,
+        "title": "Natural Language Processing (NLP)",
+        "skills": [
+          "HuggingFace",
+          "Transformers",
+          "Tokenization",
+          "LLMs",
+          "LangChain"
+        ],
+        "tasks": [
+          "Perform Sentiment Analysis on local tweets",
+          "Fine-tune a BERT model",
+          "Learn about RAG (Retrieval Augmented Generation)",
+          "Work with Swahili NLP datasets"
+        ],
+        "projects": [
+          "Sheng/Swahili Customer Support Bot: A chatbot that understands local dialects to assist users with common queries."
+        ],
+        "detailed_guide": "### Week 1: Text Preprocessing\nStemming, Lemmatization, and Word Embeddings (Word2Vec).\n### Week 2: Attention Mechanism & Transformers\nUnderstand why 'Attention is All You Need'.\n### Week 3: HuggingFace Ecosystem\nUsing the Transformers library for summarization and translation.\n### Week 4: Large Language Models (LLMs)\nPrompt engineering and building apps with the OpenAI API or Llama 3.",
+        "resources": [
+          {
+            "name": "Hugging Face Course",
+            "url": "https://huggingface.co/learn/nlp-course/",
+            "type": "course",
+            "cost": "Free",
+            "description": "The best resource for modern NLP.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Lanfrica",
+            "url": "https://lanfrica.com/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "A hub for African language resources and datasets.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 5,
+        "title": "AI Engineering & MLOps",
+        "skills": [
+          "FastAPI",
+          "Docker",
+          "MLflow",
+          "Cloud Deployment (AWS/Azure)"
+        ],
+        "tasks": [
+          "Containerize an ML model with Docker",
+          "Build a REST API for model inference",
+          "Set up model monitoring",
+          "Learn CI/CD for Machine Learning"
+        ],
+        "projects": [
+          "Production-Ready Credit Scoring API: Deploy your Month 2 project as a scalable API with documentation and monitoring."
+        ],
+        "detailed_guide": "### Week 1: API Development\nBuilding robust endpoints with FastAPI.\n### Week 2: Dockerization\nPackaging your environment to ensure it runs anywhere.\n### Week 3: Cloud Basics\nDeploying a container to AWS Lambda or Azure App Service.\n### Week 4: MLOps Tools\nIntroduction to tracking experiments with MLflow or Weights & Biases.",
+        "resources": [
+          {
+            "name": "Made With ML",
+            "url": "https://madewithml.com/",
+            "type": "course",
+            "cost": "Free",
+            "description": "Excellent guide on the full ML lifecycle from code to production.",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 6,
+        "title": "Portfolio & Job Market Integration",
+        "skills": [
+          "Technical Writing",
+          "Open Source Contribution",
+          "Soft Skills",
+          "Interview Prep"
+        ],
+        "tasks": [
+          "Build a portfolio website",
+          "Write 2 technical blog posts on Medium/Dev.to",
+          "Prepare for LeetCode-style Python interviews",
+          "Optimize LinkedIn profile for Kenyan recruiters"
+        ],
+        "projects": [
+          "End-to-End AI Portfolio: A centralized repository showcasing all previous projects with clear READMEs and live demos."
+        ],
+        "detailed_guide": "### Week 1: Portfolio Polish\nClean up GitHub repos and write comprehensive documentation.\n### Week 2: Networking\nAttend a physical tech meetup in Nairobi (e.g., iHub, Gearbox).\n### Week 3: Interview Prep\nPractice ML system design and coding challenges.\n### Week 4: Job Applications\nTarget companies like Safaricom, Equity Bank, and local AI startups (e.g., Protica, Apollo Agriculture).",
+        "resources": [
+          {
+            "name": "iHub Nairobi",
+            "url": "https://ihub.co.ke/",
+            "type": "community",
+            "cost": "Free",
+            "description": "Innovation hub for networking and finding job leads in Kenya.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      }
+    ],
+    "additional_info": "In Kenya, AI Engineers are often expected to be 'Full Stack'. Focus on being able to deploy your models, not just train them. The fintech sector is the largest employer of AI talent locally, so understanding financial data is a major plus. Always participate in Zindi hackathons to build a reputation in the African data science scene.",
+    "execution_schedule": null,
+    "result_id": "f75f98de-ea39-4a77-859b-357c1f220f26",
+    "created_at": "2026-01-02T16:10:52.188003"
+  },
+  "359d388d-68af-49b6-ab05-d55d91d31827": {
+    "summary": "A 90-day intensive roadmap designed to transition a Junior Python developer into a market-ready Full-Stack Software Engineer in Kenya. This plan focuses on the Django/React stack, which is highly sought after by Kenyan fintechs, startups, and established firms like Safaricom and Equity Bank.",
+    "months": [
+      {
+        "month": 1,
+        "title": "Month 1: Backend Mastery & API Architecture",
+        "skills": [
+          "Advanced Python",
+          "Django Framework",
+          "Django REST Framework (DRF)",
+          "PostgreSQL",
+          "Git/GitHub"
+        ],
+        "tasks": [
+          "Master Class-Based Views in Django",
+          "Implement JWT Authentication",
+          "Design relational database schemas using ERDs",
+          "Build a RESTful API with full CRUD functionality"
+        ],
+        "projects": [
+          "M-Pesa Integrated E-commerce Backend: An API that handles product management and simulates payment callbacks."
+        ],
+        "detailed_guide": "### Week 1: Advanced Python & Environment Setup\nFocus on decorators, generators, and context managers. Set up a professional workflow using Poetry or Pipenv.\n\n### Week 2: Django Fundamentals\nDeep dive into the Django ORM, Migrations, and Admin panel. Understand the MVT pattern.\n\n### Week 3: Django REST Framework (DRF)\nTransition to building APIs. Learn Serializers, ViewSets, and Permissions.\n\n### Week 4: Databases & Deployment\nSwitch from SQLite to PostgreSQL. Deploy your first API to Render or Railway.app.",
+        "resources": [
+          {
+            "name": "Django for Beginners (Will Vincent)",
+            "url": "https://djangoforbeginners.com/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "The gold standard for learning Django from scratch.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Safaricom Daraja API Portal",
+            "url": "https://developer.safaricom.co.ke/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Essential for any Kenyan developer to understand M-Pesa integration.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "title": "Month 2: Modern Frontend with React",
+        "skills": [
+          "JavaScript (ES6+)",
+          "React.js",
+          "Tailwind CSS",
+          "State Management (Context API)",
+          "Axios"
+        ],
+        "tasks": [
+          "Convert static HTML designs into reusable React components",
+          "Manage global state without Redux using Context API",
+          "Consume Month 1's Python API using Axios",
+          "Implement responsive design using Tailwind CSS"
+        ],
+        "projects": [
+          "Personal Finance Tracker: A dashboard that visualizes spending habits, fetching data from your Python backend."
+        ],
+        "detailed_guide": "### Week 1: JavaScript Essentials\nFocus on Promises, Async/Await, and Array Methods (map, filter, reduce).\n\n### Week 2: React Basics\nLearn JSX, Props, State, and the Component Lifecycle using Functional Components and Hooks (useState, useEffect).\n\n### Week 3: Styling & UI\nMaster Tailwind CSS for rapid UI development. Build a multi-page layout using React Router.\n\n### Week 4: Integration\nConnect your React frontend to your Django API. Handle CORS issues and display dynamic data.",
+        "resources": [
+          {
+            "name": "FreeCodeCamp React Course",
+            "url": "https://www.freecodecamp.org/",
+            "type": "course",
+            "cost": "Free",
+            "description": "Comprehensive interactive lessons on React.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Moringa School Open Events",
+            "url": "https://moringaschool.com/",
+            "type": "community",
+            "cost": "Free",
+            "description": "Attend local tech mixers and webinars hosted in Nairobi.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 3,
+        "title": "Month 3: Systems, DevOps & Job Hunting",
+        "skills": [
+          "Docker",
+          "Data Structures & Algorithms",
+          "System Design",
+          "CI/CD (GitHub Actions)",
+          "Soft Skills"
+        ],
+        "tasks": [
+          "Containerize a full-stack application using Docker Compose",
+          "Solve 2 LeetCode problems daily (Easy/Medium)",
+          "Optimize LinkedIn profile for Kenyan recruiters",
+          "Prepare a technical portfolio website"
+        ],
+        "projects": [
+          "Professional Portfolio: A production-ready site hosted on a custom .ke or .com domain showcasing all previous work."
+        ],
+        "detailed_guide": "### Week 1: DevOps Basics\nLearn Docker basics. Create a Dockerfile for your Django app and a Docker Compose file for the DB and Frontend.\n\n### Week 2: DSA for Interviews\nFocus on Arrays, Linked Lists, Stacks, Queues, and Big O notation. Use Python for implementations.\n\n### Week 3: System Design & Documentation\nLearn about Load Balancers, Caching (Redis), and writing clear README files and API docs (Swagger/Redoc).\n\n### Week 4: Kenyan Market Strategy\nApply to 5 jobs daily on LinkedIn and MyJobMag. Reach out to tech recruiters at companies like Little, Wasoko, and Sendy.",
+        "resources": [
+          {
+            "name": "MyJobMag Kenya",
+            "url": "https://www.myjobmag.co.ke/jobs-by-field/ict-computer",
+            "type": "community",
+            "cost": "Free",
+            "description": "Top job board for tech roles in Kenya.",
+            "is_local": true,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Full Stack Python",
+            "url": "https://www.fullstackpython.com/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Explains the entire stack from server to CSS.",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      }
+    ],
+    "additional_info": "Focus heavily on networking within the Nairobi tech scene (Silicon Savannah). Join the 'Nairobi Gophers' or 'Python Kenya' user groups on Meetup.com or Telegram. In the Kenyan market, having a project that includes a mobile money (M-Pesa) integration is often the 'X-factor' that gets a Junior hired over others.",
+    "execution_schedule": null,
+    "result_id": "359d388d-68af-49b6-ab05-d55d91d31827",
+    "created_at": "2026-01-02T16:19:00.868801"
+  },
+  "6459cb7c-f524-46a3-bbdd-aaa03bd2e369": {
+    "summary": "This 8-week intensive roadmap transitions you from basic HTML/CSS knowledge to a job-ready Junior Frontend Developer, specifically optimized for the Nairobi tech ecosystem. It focuses on JavaScript mastery and React.js, which are currently the most in-demand skills in Kenya's 'Silicon Savannah'.",
+    "months": [
+      {
+        "month": 1,
+        "title": "Month 1: JavaScript Mastery & Modern Styling",
+        "skills": [
+          "Advanced CSS (Flexbox/Grid)",
+          "JavaScript Fundamentals",
+          "DOM Manipulation",
+          "ES6 Syntax",
+          "Asynchronous JavaScript"
+        ],
+        "tasks": [
+          "Master CSS Layouts (Flexbox and Grid) for responsive design",
+          "Learn JavaScript basics: variables, data types, and functions",
+          "Understand the Document Object Model (DOM) to make pages interactive",
+          "Practice API fetching using the Fetch API",
+          "Set up a GitHub profile and learn basic Git commands"
+        ],
+        "projects": [
+          "Interactive Nairobi Event Countdown Timer",
+          "Dynamic Weather App using a public API",
+          "Personal Expense Tracker (optimized for KES currency)"
+        ],
+        "detailed_guide": "### Week 1: Advanced CSS & Responsive Design\nFocus on making layouts that work on mobile devices, as mobile traffic is dominant in Kenya. Learn CSS Grid and Flexbox.\n\n### Week 2: JS Fundamentals\nLearn variables (let/const), loops, and conditional statements. Practice logic building through small coding challenges.\n\n### Week 3: DOM & Events\nLearn how to select HTML elements and change their content or style using JavaScript. Build a 'To-Do List' that saves to local storage.\n\n### Week 4: ES6 & API Integration\nStudy arrow functions, destructuring, and template literals. Learn how to fetch data from an external API (like OpenWeatherMap) and display it on your site.",
+        "resources": [
+          {
+            "name": "FreeCodeCamp JavaScript Algorithms",
+            "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/",
+            "type": "course",
+            "cost": "Free",
+            "description": "Comprehensive JS curriculum.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "NairobiJS Meetup Group",
+            "url": "https://www.meetup.com/nairobi-js/",
+            "type": "community",
+            "cost": "Free",
+            "description": "Local community for JavaScript developers in Nairobi.",
+            "is_local": true,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "MDN Web Docs",
+            "url": "https://developer.mozilla.org/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "The gold standard for web documentation.",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "title": "Month 2: React.js & Professional Portfolio",
+        "skills": [
+          "React.js Fundamentals",
+          "State Management (Hooks)",
+          "Tailwind CSS",
+          "Git/GitHub Professional Workflow",
+          "Deployment (Vercel/Netlify)"
+        ],
+        "tasks": [
+          "Initialize React apps using Vite",
+          "Build reusable components",
+          "Manage application state with useState and useEffect",
+          "Integrate Tailwind CSS for rapid UI development",
+          "Deploy a professional portfolio to a live URL"
+        ],
+        "projects": [
+          "Real Estate Listing Site for Nairobi Neighborhoods",
+          "E-commerce Storefront (using a Mock API)",
+          "Professional Developer Portfolio"
+        ],
+        "detailed_guide": "### Week 5: Introduction to React\nLearn the component-based architecture. Understand JSX and how to pass data via Props.\n\n### Week 6: State & Hooks\nDeep dive into useState and useEffect. Build a functional application that reacts to user input in real-time.\n\n### Week 7: Tailwind CSS & Routing\nLearn Tailwind CSS for styling. Use React Router to create multi-page applications (Home, About, Contact).\n\n### Week 8: Deployment & Job Prep\nFinalize your portfolio. Host your projects on Vercel. Optimize your LinkedIn profile for the Nairobi market (mentioning proximity to tech hubs like Westlands and Ngong Road).",
+        "resources": [
+          {
+            "name": "Scrimba: Learn React for Free",
+            "url": "https://scrimba.com/learn/learnreact",
+            "type": "course",
+            "cost": "Free",
+            "description": "Interactive React tutorial.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Moringa School Blog",
+            "url": "https://moringaschool.com/blog/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Insights into the Kenyan tech job market.",
+            "is_local": true,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "iHub Nairobi",
+            "url": "https://ihub.co.ke/",
+            "type": "community",
+            "cost": "Paid",
+            "description": "Innovation hub for networking and co-working spaces.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      }
+    ],
+    "additional_info": "To succeed in Nairobi's market: 1. Network at iHub or Gearbox. 2. Tailor your CV for local recruiters like Shortlist or BrighterMonday. 3. Ensure your portfolio projects are mobile-responsive, as many local clients prioritize mobile-first experiences. 4. Join the 'KOT' (Kenyans on Twitter) tech community to find 'build-in-public' opportunities.",
+    "execution_schedule": null,
+    "result_id": "6459cb7c-f524-46a3-bbdd-aaa03bd2e369",
+    "created_at": "2026-01-02T16:20:07.729735"
+  },
+  "da125742-5ff6-446d-ac57-44159fe62f20": {
+    "summary": "A fast-paced, 8-week intensive roadmap designed to transition a beginner with basic Python knowledge into a Junior Python Developer, specifically tailored for the Nairobi tech ecosystem which favors web backend development and fintech integrations.",
+    "months": [
+      {
+        "month": 1,
+        "title": "Month 1: Strengthening Fundamentals & Database Design",
+        "skills": [
+          "Object-Oriented Programming (OOP)",
+          "Git & GitHub",
+          "SQL & Relational Databases",
+          "Virtual Environments",
+          "Linux Basics"
+        ],
+        "tasks": [
+          "Master Python classes, inheritance, and dunder methods.",
+          "Learn to use Git for version control (branching, merging, pull requests).",
+          "Install and configure PostgreSQL.",
+          "Practice writing complex SQL queries and understanding normalization.",
+          "Learn to use 'pip' and 'venv' or 'poetry' for dependency management."
+        ],
+        "projects": [
+          "Inventory Management System (CLI-based with SQL backend)",
+          "Personal Expense Tracker using Python and SQLite"
+        ],
+        "detailed_guide": "### Week 1: Advanced Python Basics\nFocus on OOP. Understand how to structure code into classes. Read about 'The Pythonic Way' (PEP 8).\n\n### Week 2: Version Control & Environment\nSet up a GitHub profile. Learn the command line. Every piece of code you write must now be pushed to a repository.\n\n### Week 3: Databases (SQL)\nNairobi's corporate and startup world runs on data. Master PostgreSQL. Understand tables, relationships (1-to-many, many-to-many), and joins.\n\n### Week 4: Introduction to Web Basics\nLearn how the internet works (HTTP/HTTPS, Request/Response cycle). Start with a simple Flask 'Hello World'.",
+        "resources": [
+          {
+            "name": "Python Nairobi Community",
+            "url": "https://twitter.com/pynairobi",
+            "type": "community",
+            "cost": "Free",
+            "description": "Local community for Python developers in Kenya. Great for networking and monthly meetups.",
+            "is_local": true,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Real Python",
+            "url": "https://realpython.com/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "High-quality tutorials for deep-diving into OOP and advanced concepts.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Full Stack Python",
+            "url": "https://www.fullstackpython.com/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Explains why you use certain tools (databases, web servers) in the Python ecosystem.",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "title": "Month 2: Web Frameworks, APIs & Job Readiness",
+        "skills": [
+          "Django Framework",
+          "Django REST Framework (DRF)",
+          "API Integration (M-Pesa Daraja API)",
+          "Unit Testing",
+          "Deployment (Heroku/Render)"
+        ],
+        "tasks": [
+          "Build a full-featured web application using Django.",
+          "Develop a RESTful API and document it using Swagger/Postman.",
+          "Integrate a local payment gateway (M-Pesa) into a project.",
+          "Write unit tests for your logic using 'pytest'.",
+          "Deploy a live project and optimize your LinkedIn/CV for the Nairobi market."
+        ],
+        "projects": [
+          "E-commerce Backend with M-Pesa Integration",
+          "Nairobi Housing Rental API using Django REST Framework"
+        ],
+        "detailed_guide": "### Week 5: Deep Dive into Django\nLearn the MVT (Model-View-Template) architecture. Build a blog or a simple e-commerce store.\n\n### Week 6: REST APIs & DRF\nMost Nairobi startups need API developers for mobile apps. Master Serializers, ViewSets, and Authentication in Django REST Framework.\n\n### Week 7: Local Integrations & Testing\nIn Kenya, Fintech is king. Learn to integrate the Safaricom Daraja API. Write tests to ensure your payment logic doesn't fail.\n\n### Week 8: Portfolio & Networking\nClean up your GitHub. Host your best project on Render or a VPS. Attend a tech event at iHub or Gearbox in Nairobi to network.",
+        "resources": [
+          {
+            "name": "Safaricom Daraja Portal",
+            "url": "https://developer.safaricom.co.ke/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Essential for learning how to integrate M-Pesa payments, a highly sought-after skill in Kenya.",
+            "is_local": true,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Django for Beginners (William Vincent)",
+            "url": "https://djangoforbeginners.com/",
+            "type": "course",
+            "cost": "Paid",
+            "description": "The best resource for getting a Django project up and running quickly.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Moringa School Open Classroom",
+            "url": "https://moringaschool.com/",
+            "type": "community",
+            "cost": "Free",
+            "description": "Occasional free workshops and a great place to meet other learners in Nairobi.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      }
+    ],
+    "additional_info": "Focus heavily on the 'M-Pesa Integration' project; it is a major differentiator in the Nairobi job market. Ensure your LinkedIn profile mentions 'Python (Django)' and 'Backend Development'. Visit tech hubs like iHub (Kilimani) or Jenga Health to meet other developers. Networking in the Nairobi 'Silicon Savannah' is often more effective than cold-applying for jobs.",
+    "execution_schedule": null,
+    "result_id": "da125742-5ff6-446d-ac57-44159fe62f20",
+    "created_at": "2026-01-02T16:22:13.501630"
+  },
+  "9cf80031-73df-4d28-ad89-5f5389296b70": {
+    "summary": "A comprehensive 6-month career transition roadmap designed to take a beginner with Python/JS knowledge to a job-ready AI Engineer status in Kenya. This path emphasizes data science fundamentals, deep learning, Generative AI, and deployment, leveraging local communities like AI Kenya and Zindi.",
+    "months": [
+      {
+        "month": 1,
+        "title": "Data Science Foundations & Mathematics",
+        "skills": [
+          "NumPy",
+          "Pandas",
+          "Matplotlib/Seaborn",
+          "Linear Algebra",
+          "Statistics"
+        ],
+        "tasks": [
+          "Master data manipulation with Pandas",
+          "Understand matrix operations and derivatives for backpropagation",
+          "Perform Exploratory Data Analysis (EDA) on local datasets"
+        ],
+        "projects": [
+          "Analysis of Nairobi Housing Prices: A data visualization project using scraped or public real estate data."
+        ],
+        "detailed_guide": "### Weekly Breakdown\n**Week 1:** Linear Algebra & Calculus for ML. Focus on matrices, vectors, and partial derivatives.\n**Week 2:** Advanced Python for AI. Decorators, generators, and OOP principles.\n**Week 3:** NumPy and Pandas. Efficient data processing and cleaning techniques.\n**Week 4:** Data Visualization. Use Seaborn to find correlations in datasets.",
+        "resources": [
+          {
+            "name": "Khan Academy: Linear Algebra",
+            "url": "https://www.khanacademy.org/math/linear-algebra",
+            "type": "course",
+            "cost": "Free",
+            "description": "Foundational math for understanding how AI models process data.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Zindi Africa",
+            "url": "https://zindi.africa/",
+            "type": "community",
+            "cost": "Free",
+            "description": "The leading data science competition platform in Africa to find local datasets.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "title": "Classical Machine Learning",
+        "skills": [
+          "Scikit-Learn",
+          "Supervised Learning",
+          "Unsupervised Learning",
+          "Feature Engineering"
+        ],
+        "tasks": [
+          "Implement Regression and Classification models",
+          "Learn Cross-validation and Hyperparameter tuning",
+          "Understand Bias-Variance tradeoff"
+        ],
+        "projects": [
+          "Fintech Credit Scoring Model: Predict loan default probability using a synthetic Kenyan micro-lending dataset."
+        ],
+        "detailed_guide": "### Weekly Breakdown\n**Week 1:** Regression models (Linear, Polynomial, Ridge/Lasso).\n**Week 2:** Classification (Logistic Regression, SVMs, Decision Trees).\n**Week 3:** Ensemble Methods (Random Forest, XGBoost, LightGBM).\n**Week 4:** Dimensionality Reduction (PCA) and Clustering (K-Means).",
+        "resources": [
+          {
+            "name": "Machine Learning by Andrew Ng (Coursera)",
+            "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+            "type": "course",
+            "cost": "Paid/Financial Aid",
+            "description": "The gold standard for learning ML fundamentals.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "AI Kenya Meetups",
+            "url": "https://aikenya.com/",
+            "type": "community",
+            "cost": "Free",
+            "description": "Join local meetups to see how ML is applied in the Kenyan corporate sector.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 3,
+        "title": "Deep Learning & Computer Vision",
+        "skills": [
+          "PyTorch",
+          "Neural Networks",
+          "CNNs",
+          "Transfer Learning"
+        ],
+        "tasks": [
+          "Build a multi-layer perceptron from scratch in Python",
+          "Train a Convolutional Neural Network (CNN) for image classification",
+          "Use pre-trained models like ResNet or VGG"
+        ],
+        "projects": [
+          "Crop Disease Classifier: An AI tool that identifies diseases in maize or cassava leaves from images."
+        ],
+        "detailed_guide": "### Weekly Breakdown\n**Week 1:** Introduction to PyTorch Tensors and Autograd.\n**Week 2:** Building Artificial Neural Networks (ANNs).\n**Week 3:** Convolutional Neural Networks (CNNs) for vision.\n**Week 4:** Transfer Learning and fine-tuning models from HuggingFace/Torchvision.",
+        "resources": [
+          {
+            "name": "DeepLearning.AI",
+            "url": "https://www.deeplearning.ai/",
+            "type": "course",
+            "cost": "Paid",
+            "description": "Deep dive into neural networks and their architectures.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Fast.ai",
+            "url": "https://www.fast.ai/",
+            "type": "course",
+            "cost": "Free",
+            "description": "Practical deep learning for coders.",
+            "is_local": false,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 4,
+        "title": "Natural Language Processing (NLP) & LLMs",
+        "skills": [
+          "HuggingFace",
+          "Transformers",
+          "Tokenization",
+          "Prompt Engineering"
+        ],
+        "tasks": [
+          "Fine-tune a BERT model for sentiment analysis",
+          "Learn about Attention mechanisms",
+          "Work with OpenAI API and LangChain"
+        ],
+        "projects": [
+          "Swahili Sentiment Analyzer: A tool to analyze public sentiment on Kenyan social media (Twitter/X)."
+        ],
+        "detailed_guide": "### Weekly Breakdown\n**Week 1:** Text preprocessing and Word Embeddings (Word2Vec, GloVe).\n**Week 2:** Sequence models (RNNs, LSTMs) and the Transformer architecture.\n**Week 3:** HuggingFace Ecosystem (Datasets, Transformers, Hub).\n**Week 4:** Introduction to Large Language Models (LLMs) and RAG (Retrieval Augmented Generation).",
+        "resources": [
+          {
+            "name": "Hugging Face NLP Course",
+            "url": "https://huggingface.co/learn/nlp-course/",
+            "type": "documentation",
+            "cost": "Free",
+            "description": "Comprehensive guide to state-of-the-art NLP.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Lanfrica",
+            "url": "https://lanfrica.com/",
+            "type": "community",
+            "cost": "Free",
+            "description": "A resource for African language datasets and research.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 5,
+        "title": "AI Engineering & MLOps",
+        "skills": [
+          "FastAPI",
+          "Docker",
+          "Model Deployment",
+          "Git/GitHub Actions"
+        ],
+        "tasks": [
+          "Wrap a model in a REST API using FastAPI",
+          "Containerize the application with Docker",
+          "Set up a CI/CD pipeline for automated testing"
+        ],
+        "projects": [
+          "Production-Ready AI API: Deploy your Crop Disease Classifier as a scalable web service on AWS or Azure."
+        ],
+        "detailed_guide": "### Weekly Breakdown\n**Week 1:** Backend development for AI with FastAPI.\n**Week 2:** Dockerizing ML environments for reproducibility.\n**Week 3:** Model serving (BentoML or Ray Serve) and monitoring.\n**Week 4:** Cloud deployment basics (AWS SageMaker or Google Vertex AI).",
+        "resources": [
+          {
+            "name": "Made With ML",
+            "url": "https://madewithml.com/",
+            "type": "course",
+            "cost": "Free",
+            "description": "Learn how to combine ML with software engineering best practices.",
+            "is_local": false,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "Microsoft ADC Kenya",
+            "url": "https://www.microsoft.com/en-us/adc",
+            "type": "community",
+            "cost": "Free",
+            "description": "Follow their events for insights into cloud engineering in the local market.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      },
+      {
+        "month": 6,
+        "title": "Portfolio & Career Launch",
+        "skills": [
+          "Technical Writing",
+          "System Design",
+          "Interview Prep"
+        ],
+        "tasks": [
+          "Build a comprehensive portfolio website",
+          "Write 2-3 technical blog posts on Medium or Dev.to",
+          "Apply for AI/ML roles in Nairobi-based tech hubs"
+        ],
+        "projects": [
+          "Capstone: RAG-based Chatbot for Kenyan Law: A chatbot that answers legal questions based on the Kenyan Constitution."
+        ],
+        "detailed_guide": "### Weekly Breakdown\n**Week 1:** Finalizing the Capstone project and documentation.\n**Week 2:** Optimizing LinkedIn and GitHub profiles. Focus on keywords like 'PyTorch', 'FastAPI', and 'LLMs'.\n**Week 3:** Mock Interviews (LeetCode for Python and ML Theory).\n**Week 4:** Networking and Job Applications. Reach out to local startups (e.g., in Safaricom's ecosystem or M-KOPA).",
+        "resources": [
+          {
+            "name": "DeepLearning.AI Nairobi",
+            "url": "https://www.meetup.com/deeplearning-ai-nairobi/",
+            "type": "community",
+            "cost": "Free",
+            "description": "Local chapter for networking with other AI practitioners in Kenya.",
+            "is_local": true,
+            "thumbnail_url": ""
+          },
+          {
+            "name": "ALX Africa",
+            "url": "https://www.alxafrica.com/",
+            "type": "course",
+            "cost": "Free/Scholarship",
+            "description": "Check for their AI Career programs specifically for African talent.",
+            "is_local": true,
+            "thumbnail_url": ""
+          }
+        ]
+      }
+    ],
+    "additional_info": "Focus on the 'Zindi' platform as it is highly regarded by Kenyan employers for validating practical skills. Networking at iHub or Gearbox in Nairobi can provide 'hidden' job opportunities. Given your JS background, don't ignore TensorFlow.js for in-browser AI, which is a niche but growing skill in the local web development market.",
+    "execution_schedule": null,
+    "result_id": "9cf80031-73df-4d28-ad89-5f5389296b70",
+    "created_at": "2026-01-02T16:26:44.729579"
+  }
+}

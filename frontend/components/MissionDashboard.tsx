@@ -3,15 +3,17 @@
 import { useEffect, useState, useRef } from "react";
 import { Terminal, Activity, Wifi, ShieldCheck, Zap } from "lucide-react";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
 export default function MissionDashboard() {
     const [logs, setLogs] = useState<any[]>([]);
     const [status, setStatus] = useState("ACTIVE");
-    const logsEndRef = useRef<HTMLDivElement>(null);
+    const logsContainerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const interval = setInterval(async () => {
             try {
-                const res = await fetch("http://localhost:8000/api/mission/logs");
+                const res = await fetch(`${API_URL}/api/mission/logs`);
                 const data = await res.json();
                 if (data.logs) {
                     setLogs(data.logs);
@@ -25,7 +27,9 @@ export default function MissionDashboard() {
     }, []);
 
     useEffect(() => {
-        logsEndRef.current?.scrollIntoView({ behavior: "smooth" });
+        if (logsContainerRef.current) {
+            logsContainerRef.current.scrollTop = logsContainerRef.current.scrollHeight;
+        }
     }, [logs]);
 
     return (
@@ -55,7 +59,10 @@ export default function MissionDashboard() {
                     <div className="ml-4 text-[10px] text-slate-500">mission_control.log</div>
                 </div>
 
-                <div className="p-6 pt-16 h-[300px] overflow-y-auto custom-scrollbar space-y-2">
+                <div
+                    ref={logsContainerRef}
+                    className="p-6 pt-16 h-[300px] overflow-y-auto custom-scrollbar space-y-2"
+                >
                     {logs.length === 0 && <div className="text-slate-600 italic">Establishing link to Mission Control...</div>}
                     {logs.map((log, i) => (
                         <div key={i} className="flex gap-4 animate-fade-in">
@@ -70,7 +77,6 @@ export default function MissionDashboard() {
                             <span className="text-slate-300 break-all">{log.message}</span>
                         </div>
                     ))}
-                    <div ref={logsEndRef} />
                 </div>
 
                 {/* Scanline effect */}

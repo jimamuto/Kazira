@@ -1,0 +1,18 @@
+{
+  "name": "Kazira Demo Environment",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-sqlite"
+      ]
+    }
+  },
+  "forwardPorts": [8000, 3000],
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true
+}

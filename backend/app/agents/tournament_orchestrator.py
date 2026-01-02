@@ -22,6 +22,7 @@ class TournamentOrchestrator:
         Returns the winner's results plus tournament statistics.
         """
         logging.info(f"🏆 Starting Competitive Agent Tournament for: {goal}")
+        logging.debug(f"Tournament config: location={location}, num_agents={num_agents}")
 
         # Define tournament strategies (each agent has different approach)
         strategies = [
@@ -34,12 +35,14 @@ class TournamentOrchestrator:
 
         # Limit to available strategies or specified number
         tournament_strategies = strategies[:min(num_agents, len(strategies))]
+        logging.debug(f"Running strategies: {tournament_strategies}")
 
         # Spawn agents with different strategies
         agents = []
         for strategy in tournament_strategies:
             agent = ResearchAgent(strategy=strategy)
             agents.append(agent)
+        logging.debug(f"Created {len(agents)} tournament agents")
 
         # Run all agents concurrently (tournament parallel execution)
         logging.info(f"🤖 Running {len(agents)} agents in parallel tournament...")

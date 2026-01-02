@@ -67,15 +67,21 @@ class CareerOrchestrator:
         Executes full agentic pipeline with dynamic adjustment.
         EXTRAORDINARY: Optional tournament mode and multi-market intelligence.
         """
+        logging.info(f"🧠 Orchestrator: Starting pipeline for {self.career_goal}")
+        logging.debug(f"Pipeline config: tournament_mode={tournament_mode}, multi_market={multi_market}, constraints={constraints}")
+
         try:
             # 1. Research (with optional tournament or multi-market mode)
             if tournament_mode:
                 logging.info("🏆 Running research in TOURNAMENT MODE")
+                logging.debug(f"Tournament config: goal={self.career_goal}, location={self.location}")
                 tournament_orchestrator = TournamentOrchestrator()
                 self.context["research_data"] = await tournament_orchestrator.run_tournament(
                     self.career_goal, self.location
                 )
+                logging.debug(f"Tournament results: winner={self.context['research_data'].get('winner_strategy', 'unknown')}")
             else:
+                logging.debug("Running standard research phase")
                 self.context["research_data"] = await self._run_research(multi_market)
 
             # 2. Planning
@@ -131,9 +137,13 @@ class CareerOrchestrator:
             raise
 
     async def _run_research(self, multi_market: bool = False):
+        logging.info("🔍 Starting research phase")
+        logging.debug(f"Research config: multi_market={multi_market}, goal={self.career_goal}, location={self.location}")
         self.state = "RESEARCHING"
         agent = ResearchAgent()
         data = await agent.research(self.career_goal, self.location, multi_market)
+        logging.info(f"✅ Research completed: {len(data.get('listings', []))} listings analyzed")
+        logging.debug(f"Research data keys: {list(data.keys())}")
         await self.save_thought_signature("RESEARCH_COMPLETE", {
             "jobs_analyzed": len(data.get("listings", [])),
             "multi_market_enabled": multi_market,
@@ -142,25 +152,37 @@ class CareerOrchestrator:
         return data
 
     async def _run_planning(self, research_data: Dict[str, Any], constraints: Dict[str, Any]):
+        logging.info("📋 Starting planning phase")
+        logging.debug(f"Planning input: research_data_keys={list(research_data.keys())}, constraints={constraints}")
         self.state = "PLANNING"
         agent = PlanningAgent()
         roadmap = await agent.create_roadmap(self.career_goal, research_data, constraints)
+        logging.info(f"✅ Planning completed: {len(roadmap.get('months', []))} months planned")
+        logging.debug(f"Roadmap structure: {len(roadmap.get('months', []))} months, {len(roadmap.get('milestones', []))} milestones")
         await self.save_thought_signature("PLAN_GENERATED", {"milestones": len(roadmap.get("milestones", []))})
         return roadmap
 
     async def _run_execution(self, roadmap: Dict[str, Any], constraints: Dict[str, Any]):
+        logging.info("⚡ Starting execution phase")
+        logging.debug(f"Execution config: hours_per_week={constraints.get('hours_per_week', 10) if constraints else 10}")
         self.state = "EXECUTING"
         agent = ExecutionAgent()
         hours = constraints.get("hours_per_week", 10) if constraints else 10
         resources = await agent.find_resources(roadmap)
         schedule = await agent.generate_schedule(roadmap, hours)
+        logging.info(f"✅ Execution completed: {len(resources)} resources found, {len(schedule.get('sprints', []))} sprints scheduled")
+        logging.debug(f"Schedule: {len(schedule.get('sprints', []))} sprints, {len(schedule.get('active_sprint_index', 0))} active sprint")
         await self.save_thought_signature("EXECUTION_COMPLETE", {"resources_found": len(resources), "daily_tasks": len(schedule.get("days", []))})
         return {"resources": resources, "schedule": schedule}
 
     async def _run_verification(self, roadmap: Dict[str, Any]):
+        logging.info("🔍 Starting verification phase")
+        logging.debug(f"Verification input: roadmap_months={len(roadmap.get('months', []))}")
         self.state = "VERIFYING"
         agent = VerificationAgent()
         results = await agent.verify_skills(roadmap)
+        logging.info(f"✅ Verification completed: {len(results)} skills verified")
+        logging.debug(f"Verification results: gaps_found={len(results.get('skill_gaps', []))}")
         await self.save_thought_signature("VERIFICATION_COMPLETE", {"quiz_ready": "quiz" in results, "interview_ready": "mock_interview" in results})
         return results
 

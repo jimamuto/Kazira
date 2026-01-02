@@ -4,7 +4,7 @@ export default function About() {
     return (
         <div className="min-h-screen pt-32 px-6 max-w-4xl mx-auto pb-32">
             <h1 className="text-6xl font-medium text-white mb-12 tracking-tight">Our <span className="text-white/40">Mission</span></h1>
-            <p className="text-slate-400 text-lg font-light mb-20 max-w-2xl leading-relaxed">Kazira was built for the Google Gemini 3 Hackathon to pioneer autonomous career orchestration using advanced multi-agent AI systems.</p>
+            <p className="text-slate-400 text-lg font-light mb-20 max-w-2xl leading-relaxed">Kazira was built for the Google Gemini 3 Hackathon to pioneer autonomous career orchestration using advanced multi-agent AI systems powered by Gemini 3.0 Flash Preview.</p>
 
             <div className="glass-card p-12 rounded-[50px] border-white/5 bg-white/5 mb-32">
                 <h2 className="text-3xl text-white mb-8 font-medium">From Static Plans to Autonomous Agents</h2>
@@ -18,7 +18,7 @@ export default function About() {
                     </div>
                     <div>
                         <h3 className="text-primary font-bold uppercase text-[10px] tracking-widest mb-4">Core Technology</h3>
-                        <p className="text-white font-light">Powered by Gemini 3 Flash with 1M token context windows, built with Next.js 16, React 19, and FastAPI for enterprise-grade performance.</p>
+                        <p className="text-white font-light">Powered by Gemini 3.0 Flash Preview with 1M token context windows, built with Next.js 16, React 19, and FastAPI for enterprise-grade performance.</p>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@ export default function About() {
                 <div className="flex flex-wrap gap-4">
                     <span className="px-5 py-2.5 rounded-full bg-white/5 border border-white/5 text-[10px] font-bold text-white uppercase tracking-widest">Next.js 16</span>
                     <span className="px-5 py-2.5 rounded-full bg-white/5 border border-white/5 text-[10px] font-bold text-white uppercase tracking-widest">React 19</span>
-                    <span className="px-5 py-2.5 rounded-full bg-white/5 border border-white/5 text-[10px] font-bold text-white uppercase tracking-widest">Gemini 3 Flash</span>
+                    <span className="px-5 py-2.5 rounded-full bg-white/5 border border-white/5 text-[10px] font-bold text-white uppercase tracking-widest">Gemini 3.0 Flash</span>
                     <span className="px-5 py-2.5 rounded-full bg-white/5 border border-white/5 text-[10px] font-bold text-white uppercase tracking-widest">FastAPI</span>
                     <span className="px-5 py-2.5 rounded-full bg-white/5 border border-white/5 text-[10px] font-bold text-white uppercase tracking-widest">Autonomous Pipeline</span>
                     <span className="px-5 py-2.5 rounded-full bg-white/5 border border-white/5 text-[10px] font-bold text-white uppercase tracking-widest">Thought Signatures</span>

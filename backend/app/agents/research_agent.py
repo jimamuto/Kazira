@@ -23,7 +23,8 @@ class ResearchAgent:
         ENHANCED: Now includes market prediction engine for forecasting future demands.
         EXTRAORDINARY: Optional multi-market intelligence for global arbitrage analysis.
         """
-        logging.info(f"Researching real-time market for: {goal} (Multi-market: {multi_market})")
+        logging.info(f"🤖 ResearchAgent ({self.strategy}): Starting research for '{goal}' in {location}")
+        logging.debug(f"🔧 Multi-market mode: {multi_market}, Strategy: {self.strategy}")
 
         if multi_market:
             # EXTRAORDINARY: Use multi-market intelligence system
@@ -84,7 +85,7 @@ class ResearchAgent:
             prompt = f"Based on these job listings, identify the top 5 technical skills required and 2 emerging trends. Return ONLY JSON with keys 'top_skills', 'experience_required', and 'emerging_trends'.\n\nListings:\n{context}"
             
             # Use synchronous call (not async)
-            response = gemini_client.model.generate_content(prompt, generation_config={"response_mime_type": "application/json"})
+            response = await gemini_client.generate_content_async(prompt, generation_config={"response_mime_type": "application/json"})
             import json
             return json.loads(response.text)
         except Exception as e:
@@ -97,95 +98,6 @@ class ResearchAgent:
                 "error": str(e)
             }
 
-    async def _generate_market_predictions(self, current_analysis: Dict[str, Any], listings: List[Dict[str, Any]], goal: str) -> Dict[str, Any]:
-        """
-        EXTRAORDINARY FEATURE: Market Prediction Engine
-        Uses Gemini 3 to forecast future skill demands and market trends.
-        Analyzes velocity of skill adoption and predicts optimal learning timing.
-        """
-        try:
-            from app.services.gemini_client import gemini_client
-
-            # Create comprehensive context for prediction
-            context = f"""
-            Current Market Analysis for: {goal}
-            Top Skills: {', '.join(current_analysis.get('top_skills', []))}
-            Experience Required: {current_analysis.get('experience_required', 'Unknown')}
-            Emerging Trends: {', '.join(current_analysis.get('emerging_trends', []))}
-
-            Job Listings Sample ({len(listings)} total):
-            """
-            # Add sample job data
-            for job in listings[:3]:  # Use first 3 for context
-                context += f"- {job.get('title', 'Unknown')} at {job.get('company', 'Unknown')}: {job.get('description', '')[:200]}...\n"
-
-            # EXTRAORDINARY: Predictive analysis prompt
-            prediction_prompt = f"""
-            You are a Strategic Market Analyst with perfect foresight. Based on the current market data, predict future skill demands and career trajectories.
-
-            Analyze the following:
-            1. **Skill Velocity**: How fast are these skills rising/falling in demand?
-            2. **Future Demand**: Which skills will be critical in 3-6 months? 1-2 years?
-            3. **Learning Strategy**: When should someone start learning each skill?
-            4. **Market Trends**: What emerging technologies will dominate the industry?
-            5. **Career Path**: What is the optimal sequence of skills for career advancement?
-
-            Return ONLY JSON with this exact structure:
-            {{
-                "predictions": {{
-                    "immediate": {{"skills": ["skill1", "skill2"], "urgency": "Learn NOW", "reasoning": "string"}},
-                    "three_months": {{"skills": ["skill3", "skill4"], "urgency": "Start soon", "reasoning": "string"}},
-                    "six_months": {{"skills": ["skill5", "skill6"], "urgency": "Plan ahead", "reasoning": "string"}},
-                    "one_year": {{"skills": ["skill7", "skill8"], "urgency": "Strategic investment", "reasoning": "string"}}
-                }},
-                "market_velocity": {{
-                    "rising": ["skill_a", "skill_b"],
-                    "stable": ["skill_c", "skill_d"],
-                    "declining": ["skill_e", "skill_f"]
-                }},
-                "career_strategy": {{
-                    "optimal_sequence": ["skill1", "skill2", "skill3", "skill4"],
-                    "why_sequence": "Detailed explanation of learning order",
-                    "estimated_timeline": "X months to senior level",
-                    "salary_projection": "Entry: $X → Senior: $Y → Expert: $Z"
-                }},
-                "risk_assessment": {{
-                    "high_risk_skills": ["skill_that_might_become_obsolete"],
-                    "safe_bets": ["skills_with_long_term_value"],
-                    "emerging_opportunities": ["completely_new_technologies_to_watch"]
-                }}
-            }}
-
-            Context Data:
-            {context}
-            """
-
-            response = gemini_client.model.generate_content(
-                prediction_prompt,
-                generation_config={"response_mime_type": "application/json"}
-            )
-
-            import json
-            predictions = json.loads(response.text)
-
-            # Add metadata
-            predictions["generated_at"] = datetime.now().isoformat()
-            predictions["confidence_score"] = 0.85  # Self-assessed confidence
-            predictions["data_points_analyzed"] = len(listings)
-
-            logging.info(f"Market predictions generated for {goal}: {len(predictions['predictions'])} timeframes analyzed")
-            return predictions
-
-        except Exception as e:
-            logging.error(f"Market prediction failed: {e}")
-            return {
-                "error": str(e),
-                "predictions": {},
-                "market_velocity": {},
-                "career_strategy": {},
-                "risk_assessment": {},
-                "generated_at": datetime.now().isoformat()
-            }
 
     async def _generate_market_predictions(self, current_analysis: Dict[str, Any], listings: List[Dict[str, Any]], goal: str) -> Dict[str, Any]:
         """
@@ -250,7 +162,7 @@ class ResearchAgent:
             {context}
             """
 
-            response = gemini_client.model.generate_content(
+            response = await gemini_client.generate_content_async(
                 prediction_prompt,
                 generation_config={"response_mime_type": "application/json"}
             )

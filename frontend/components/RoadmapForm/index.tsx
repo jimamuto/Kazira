@@ -6,9 +6,68 @@ import { RoadmapInput, RoadmapOutput } from "@/types/roadmap";
 import { DOMAIN_TOOLKITS, TECH_ECOSYSTEMS, COMMON_ROLES, CONSTRAINT_CATEGORIES } from "@/constants/domains";
 import { Sparkles } from "lucide-react";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
 interface RoadmapFormProps {
     onSuccess: (data: RoadmapOutput) => void;
     onStartGeneration?: (goal: string) => void;
+}
+
+function RoadmapSkeleton() {
+    return (
+        <div className="max-w-7xl mx-auto py-32 px-6">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-32 gap-12">
+                <div className="space-y-6 w-full max-w-xl">
+                    <div className="h-20 w-3/4 bg-white/5 rounded-3xl animate-pulse"></div>
+                    <div className="space-y-3">
+                        <div className="h-4 w-full bg-white/5 rounded-full animate-pulse"></div>
+                        <div className="h-4 w-2/3 bg-white/5 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="relative mb-64">
+                <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-white/5 -translate-x-1/2"></div>
+
+                <div className="space-y-48">
+                    {[1, 2, 3].map((i) => (
+                        <div key={i} className="relative">
+                            <div className={`flex flex-col md:flex-row items-start md:items-center gap-20 ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                                <div className="w-full md:w-[45%]">
+                                    <div className="glass-card rounded-[48px] border-white/5 p-12 md:p-16 relative overflow-hidden">
+                                        <div className="mb-12 space-y-6">
+                                            <div className="h-10 w-2/3 bg-white/10 rounded-2xl animate-pulse"></div>
+                                            <div className="flex gap-3">
+                                                <div className="h-6 w-20 bg-white/5 rounded-full animate-pulse"></div>
+                                                <div className="h-6 w-24 bg-white/5 rounded-full animate-pulse"></div>
+                                                <div className="h-6 w-16 bg-white/5 rounded-full animate-pulse"></div>
+                                            </div>
+                                        </div>
+                                        <div className="space-y-8">
+                                            <div className="h-4 w-1/4 bg-white/5 rounded-full animate-pulse"></div>
+                                            <div className="space-y-4">
+                                                <div className="h-2 w-full bg-white/5 rounded-full animate-pulse"></div>
+                                                <div className="h-2 w-5/6 bg-white/5 rounded-full animate-pulse"></div>
+                                                <div className="h-2 w-4/6 bg-white/5 rounded-full animate-pulse"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 top-0 md:top-1/2">
+                                    <div className="w-12 h-12 rounded-full bg-black border border-white/10 flex items-center justify-center animate-pulse">
+                                        <div className="w-6 h-6 rounded-full bg-white/10"></div>
+                                    </div>
+                                </div>
+
+                                <div className="hidden md:block md:w-[45%]"></div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default function RoadmapForm({ onSuccess, onStartGeneration }: RoadmapFormProps) {
@@ -38,7 +97,7 @@ export default function RoadmapForm({ onSuccess, onStartGeneration }: RoadmapFor
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch("http://localhost:8000/api/roadmap/generate", {
+            const response = await fetch(`${API_URL}/api/roadmap/generate`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
@@ -56,7 +115,7 @@ export default function RoadmapForm({ onSuccess, onStartGeneration }: RoadmapFor
             onSuccess(data);
         } catch (error: unknown) {
             console.error("Error generating roadmap:", error);
-            setError(error.message || "An unexpected error occurred. Please try again.");
+            setError(error instanceof Error ? error.message : "An unexpected error occurred. Please try again.");
         } finally {
             setLoading(false);
         }
@@ -284,8 +343,7 @@ export default function RoadmapForm({ onSuccess, onStartGeneration }: RoadmapFor
                     </div>
                 )}
 
-                {
-                    step === 3 && (
+                {step === 3 && (
                         <div className="space-y-12 animate-fade-in">
                             <FormGroup label="Target Asset">
                                 <div className="relative space-y-6">
@@ -356,11 +414,9 @@ export default function RoadmapForm({ onSuccess, onStartGeneration }: RoadmapFor
                             </FormGroup>
                             <StepNav onNext={nextStep} onPrev={prevStep} />
                         </div>
-                    )
-                }
+                    )}
 
-                {
-                    step === 4 && (
+                {step === 4 && (
                         <div className="space-y-12 animate-fade-in">
                             <FormGroup label="Environmental Constraints">
                                 <div className="space-y-4">
@@ -417,6 +473,9 @@ export default function RoadmapForm({ onSuccess, onStartGeneration }: RoadmapFor
                                                                     />
                                                                 </div>
                                                              )}
+                        </div>
+                    )}
+
         </div>
     </form>
 
@@ -443,59 +502,4 @@ function StepNav({ onNext, onPrev }: { onNext: () => void; onPrev?: () => void }
     );
 }
 
-function RoadmapSkeleton() {
-    return (
-        <div className="max-w-7xl mx-auto py-32 px-6">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-32 gap-12">
-                <div className="space-y-6 w-full max-w-xl">
-                    <div className="h-20 w-3/4 bg-white/5 rounded-3xl animate-pulse"></div>
-                    <div className="space-y-3">
-                        <div className="h-4 w-full bg-white/5 rounded-full animate-pulse"></div>
-                        <div className="h-4 w-2/3 bg-white/5 rounded-full animate-pulse"></div>
-                    </div>
-                </div>
-            </div>
 
-            <div className="relative mb-64">
-                <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-white/5 -translate-x-1/2"></div>
-
-                <div className="space-y-48">
-                    {[1, 2, 3].map((i) => (
-                        <div key={i} className="relative">
-                            <div className={`flex flex-col md:flex-row items-start md:items-center gap-20 ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                                <div className="w-full md:w-[45%]">
-                                    <div className="glass-card rounded-[48px] border-white/5 p-12 md:p-16 relative overflow-hidden">
-                                        <div className="mb-12 space-y-6">
-                                            <div className="h-10 w-2/3 bg-white/10 rounded-2xl animate-pulse"></div>
-                                            <div className="flex gap-3">
-                                                <div className="h-6 w-20 bg-white/5 rounded-full animate-pulse"></div>
-                                                <div className="h-6 w-24 bg-white/5 rounded-full animate-pulse"></div>
-                                                <div className="h-6 w-16 bg-white/5 rounded-full animate-pulse"></div>
-                                            </div>
-                                        </div>
-                                        <div className="space-y-8">
-                                            <div className="h-4 w-1/4 bg-white/5 rounded-full animate-pulse"></div>
-                                            <div className="space-y-4">
-                                                <div className="h-2 w-full bg-white/5 rounded-full animate-pulse"></div>
-                                                <div className="h-2 w-5/6 bg-white/5 rounded-full animate-pulse"></div>
-                                                <div className="h-2 w-4/6 bg-white/5 rounded-full animate-pulse"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 top-0 md:top-1/2">
-                                    <div className="w-12 h-12 rounded-full bg-black border border-white/10 flex items-center justify-center animate-pulse">
-                                        <div className="w-6 h-6 rounded-full bg-white/10"></div>
-                                    </div>
-                                </div>
-
-                                <div className="hidden md:block md:w-[45%]"></div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
-}

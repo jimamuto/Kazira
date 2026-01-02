@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { Loader2, Search, Map, Zap, ShieldCheck, Database, AlertTriangle } from "lucide-react";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
 interface ThoughtSignature {
     step: string;
     global_state: string;
@@ -28,7 +30,7 @@ export default function AgentProgress({ goal, extraordinaryData }: AgentProgress
     useEffect(() => {
         const fetchSignatures = async () => {
             try {
-                const res = await fetch(`http://localhost:8000/api/orchestrator/signatures/${userId}`);
+                const res = await fetch(`${API_URL}/api/orchestrator/signatures/${userId}`);
                 const data = await res.json();
                 setSignatures(data.signatures || []);
                 setIsLoading(false);
@@ -86,8 +88,8 @@ export default function AgentProgress({ goal, extraordinaryData }: AgentProgress
         if (step === "RESEARCH_COMPLETE") {
             return (
                 <>
-                    <p className="text-emerald-400 text-xs mb-1">Jobs analyzed: {metadata.jobs_analyzed}</p>
-                    {metadata.sources && (
+                    <p className="text-emerald-400 text-xs mb-1">Jobs analyzed: {String(metadata.jobs_analyzed || 0)}</p>
+                    {metadata.sources && Array.isArray(metadata.sources) && (
                         <p className="text-slate-400 text-xs">Sources: {metadata.sources.join(", ")}</p>
                     )}
                 </>
@@ -95,39 +97,39 @@ export default function AgentProgress({ goal, extraordinaryData }: AgentProgress
         } else if (step === "PLAN_GENERATED") {
             return (
                 <>
-                    <p className="text-purple-400 text-xs mb-1">Milestones: {metadata.milestones}</p>
+                    <p className="text-purple-400 text-xs mb-1">Milestones: {String(metadata.milestones || 0)}</p>
                     {metadata.strategy && (
-                        <p className="text-slate-400 text-xs">Strategy: {metadata.strategy}</p>
+                        <p className="text-slate-400 text-xs">Strategy: {String(metadata.strategy)}</p>
                     )}
                 </>
             );
         } else if (step === "EXECUTION_COMPLETE") {
             return (
                 <>
-                    <p className="text-orange-400 text-xs mb-1">Resources: {metadata.resources_found}</p>
-                    <p className="text-slate-400 text-xs">Daily tasks: {metadata.daily_tasks}</p>
+                    <p className="text-orange-400 text-xs mb-1">Resources: {String(metadata.resources_found || 0)}</p>
+                    <p className="text-slate-400 text-xs">Daily tasks: {String(metadata.daily_tasks || 0)}</p>
                 </>
             );
         } else if (step === "VERIFICATION_COMPLETE") {
             return (
                 <>
-                    <p className="text-emerald-400 text-xs mb-1">Quiz: {metadata.quiz_ready ? "✓ Ready" : "✗ Pending"}</p>
-                    <p className="text-slate-400 text-xs">Interview: {metadata.interview_ready ? "✓ Ready" : "✗ Pending"}</p>
+                    <p className="text-emerald-400 text-xs mb-1">Quiz: {metadata.quiz_ready ? "Ready" : "Pending"}</p>
+                    <p className="text-slate-400 text-xs">Interview: {metadata.interview_ready ? "Ready" : "Pending"}</p>
                 </>
             );
         } else if (step === "URGENT_ALERT") {
             return (
                 <>
-                    <p className="text-red-400 text-xs font-bold mb-1">{metadata.message_type}</p>
-                    <p className="text-white/80 text-xs">From: {metadata.from_agent}</p>
-                    <p className="text-slate-400 text-xs">Data: {JSON.stringify(metadata.data)}</p>
+                    <p className="text-red-400 text-xs font-bold mb-1">{String(metadata.message_type || "Message")}</p>
+                    <p className="text-white/80 text-xs">From: {String(metadata.from_agent || "Unknown")}</p>
+                    <p className="text-slate-400 text-xs">Data: {JSON.stringify(metadata.data || {})}</p>
                 </>
             );
         } else if (step === "MARATHON_CYCLE_COMPLETE") {
             return (
                 <>
-                    <p className="text-emerald-400 text-xs mb-1">Cycle #{metadata.cycle}</p>
-                    <p className="text-slate-400 text-xs">Duration: {metadata.duration}</p>
+                    <p className="text-emerald-400 text-xs mb-1">Cycle #{String(metadata.cycle || 1)}</p>
+                    <p className="text-slate-400 text-xs">Duration: {String(metadata.duration || "N/A")}</p>
                 </>
             );
         } else {
@@ -207,7 +209,9 @@ export default function AgentProgress({ goal, extraordinaryData }: AgentProgress
                                                 sig.global_state === "VERIFYING" ? "bg-emerald-500/20" :
                                                 "bg-white/5"
                                             }`}>
-                                                {getIconForState(sig.global_state)}
+                                                {React.createElement(getIconForState(sig.global_state), {
+                                                    className: "w-4 h-4 text-slate-400"
+                                                })}
                                             </div>
                                             <div>
                                                 <span className="text-[11px] font-bold text-white uppercase tracking-widest">{sig.step}</span>

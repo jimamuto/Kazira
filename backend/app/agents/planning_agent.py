@@ -16,16 +16,19 @@ class PlanningAgent:
         Generates a 6-month roadmap based on market research, predictions, and user constraints.
         EXTRAORDINARY FEATURE: Incorporates market prediction engine for strategic planning.
         """
-        logging.info(f"Planning strategic roadmap for: {goal}")
+        logging.info(f"🗺️ Planning strategic roadmap for: {goal}")
+        logging.debug(f"Planning input: research_data_keys={list(research_data.keys())}, constraints={user_constraints}")
 
         # Extract skills from research
         top_skills = research_data.get("analysis", {}).get("top_skills", [])
         trends = research_data.get("analysis", {}).get("emerging_trends", [])
+        logging.debug(f"Extracted skills: {len(top_skills)} top skills, {len(trends)} trends")
 
         # EXTRAORDINARY: Extract prediction data for strategic planning
         predictions = research_data.get("predictions", {})
         market_velocity = predictions.get("market_velocity", {})
         career_strategy = predictions.get("career_strategy", {})
+        logging.debug(f"Market predictions: velocity_categories={list(market_velocity.keys())}, strategy_keys={list(career_strategy.keys())}")
         
         system_prompt = """
         You are a Strategic Career Architect with PERFECT FORESIGHT.
@@ -97,10 +100,9 @@ class PlanningAgent:
 
         Make this roadmap EXTRAORDINARY - not generic, but PREDICTIVE and STRATEGIC.
         """
-        
+
         try:
-            # Use synchronous call (not async)
-            response = gemini_client.model.generate_content(
+            response = await gemini_client.generate_content(
                 f"{system_prompt}\n\n{user_prompt}",
                 generation_config={"response_mime_type": "application/json"}
             )
@@ -166,9 +168,9 @@ class PlanningAgent:
         
         Update the roadmap to incorporate these changes.
         """
-        
+
         try:
-            response = gemini_client.model.generate_content(
+            response = await gemini_client.generate_content(
                 f"{system_prompt}\n\n{user_prompt}",
                 generation_config={"response_mime_type": "application/json"}
             )

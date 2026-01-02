@@ -56,3 +56,11 @@ class RoadmapInput(BaseModel):
     hours_per_week: int
     timeframe_months: int # 3 or 6
     constraints: List[str] # e.g., "laptop", "4G bundles"
+
+class QuickRoadmapInput(BaseModel):
+    target_role: str
+    location: str = "Kenya"
+    current_status: str = "beginner"
+    skills: List[str] = []
+    timeframe_months: int = 6
+    constraints: List[str] = []

@@ -44,6 +44,14 @@ export interface RoadmapOutput {
     execution_schedule?: ExecutionSchedule;
     target_role: string;
     hours_per_week: number;
+    timeframe_months?: number;
+    location?: string;
+    logs?: {
+        timestamp: string;
+        source: string;
+        message: string;
+        metadata?: any;
+    }[];
 }
 
 export interface RoadmapInput {

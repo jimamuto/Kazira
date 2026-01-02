@@ -11,6 +11,63 @@ class VerificationAgent:
     def __init__(self):
         self.name = "VerificationAgent"
 
+    async def verify_project_repo(self, repo_url: str, requirements: List[str]) -> Dict[str, Any]:
+        """
+        EXTRAORDINARY: Autonomous Code Vibe Check
+        Verifies if a user's GitHub repo matches the roadmap requirements.
+        Uses Gemini to reason over code structure (README, package.json).
+        """
+        logging.info(f"🕵️ VerificationAgent: Auditing repo {repo_url}")
+        
+        try:
+            import httpx
+            # Convert normal URL to raw content URL for README
+            # Example: https://github.com/user/repo -> https://raw.githubusercontent.com/user/repo/main/README.md
+            
+            # Simple heuristic for main/master branch
+            base_url = repo_url.replace("github.com", "raw.githubusercontent.com")
+            readme_url = f"{base_url}/main/README.md"
+            
+            async with httpx.AsyncClient() as client:
+                resp = await client.get(readme_url)
+                if resp.status_code == 404:
+                    readme_url = f"{base_url}/master/README.md"
+                    resp = await client.get(readme_url)
+                
+                if resp.status_code != 200:
+                    return {
+                        "verified": False,
+                        "score": 0,
+                        "reason": "Could not access README.md. Please ensure the repo is public and has a README."
+                    }
+                
+                readme_content = resp.text[:5000] # Analyze first 5k chars
+                
+                # Use Gemini to Audit
+                from app.services.gemini_client import gemini_client
+                prompt = f"""
+                Audit this GitHub Project README against these requirements: {requirements}
+                
+                README Content:
+                {readme_content}
+                
+                Return JSON:
+                {{
+                    "verified": true/false (true if most requirements met),
+                    "score": 0-100,
+                    "found_features": ["feature1", "feature2"],
+                    "missing_features": ["feature3"],
+                    "feedback": "Constructive feedback on the project documentation."
+                }}
+                """
+                
+                ai_resp = await gemini_client.generate_content_async(prompt, generation_config={"response_mime_type": "application/json"})
+                return json.loads(ai_resp.text)
+                
+        except Exception as e:
+            logging.error(f"Repo verification failed: {e}")
+            return {"verified": False, "error": str(e)}
+
     async def verify_skills(self, roadmap: Dict[str, Any]) -> Dict[str, Any]:
         """
         Main entry point for skill verification.
@@ -43,7 +100,7 @@ class VerificationAgent:
         
         try:
             # Use synchronous call
-            response = gemini_client.model.generate_content(prompt, generation_config={"response_mime_type": "application/json"})
+            response = await gemini_client.generate_content_async(prompt, generation_config={"response_mime_type": "application/json"})
             return json.loads(response.text)
         except Exception as e:
             logging.error(f"Quiz generation failed: {e}")
@@ -62,7 +119,7 @@ class VerificationAgent:
         
         try:
             # Use synchronous call
-            response = gemini_client.model.generate_content(prompt, generation_config={"response_mime_type": "application/json"})
+            response = await gemini_client.generate_content_async(prompt, generation_config={"response_mime_type": "application/json"})
             return json.loads(response.text)
         except Exception as e:
             logging.error(f"Mock interview generation failed: {e}")
@@ -90,7 +147,7 @@ class VerificationAgent:
         
         try:
             # Use synchronous call
-            response = gemini_client.model.generate_content(prompt, generation_config={"response_mime_type": "application/json"})
+            response = await gemini_client.generate_content_async(prompt, generation_config={"response_mime_type": "application/json"})
             return json.loads(response.text)
         except Exception as e:
             logging.error(f"Roadmap adjustment failed: {e}")

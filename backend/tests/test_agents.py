@@ -26,7 +26,7 @@ async def test_planning_agent_create_roadmap():
 
     mock_data = {"milestones": []}
 
-    with patch('app.services.gemini_client.gemini_client.model.generate_content', new_callable=AsyncMock) as mock_generate:
+    with patch('app.services.gemini_client.gemini_client.generate_content', new_callable=AsyncMock) as mock_generate:
         mock_generate.return_value = type('MockResponse', (), {'text': '{"milestones": []}'})()
 
         result = await agent.create_roadmap("Engineer", {"analysis": {"top_skills": []}}, {})
@@ -39,7 +39,7 @@ async def test_execution_agent_find_resources():
 
     mock_data = {"suggestions": []}
 
-    with patch('app.services.gemini_client.gemini_client.model.generate_content', new_callable=AsyncMock) as mock_generate:
+    with patch('app.services.gemini_client.gemini_client.generate_content', new_callable=AsyncMock) as mock_generate:
         mock_generate.return_value = type('MockResponse', (), {'text': '{"suggestions": []}'})()
 
         result = await agent.find_resources({"milestones": [{"title": "Test", "focus": ["Python"]}]})
@@ -50,7 +50,7 @@ async def test_execution_agent_find_resources():
 async def test_verification_agent_verify_skills():
     agent = VerificationAgent()
 
-    with patch('app.services.gemini_client.gemini_client.model.generate_content', new_callable=AsyncMock) as mock_generate:
+    with patch('app.services.gemini_client.gemini_client.generate_content', new_callable=AsyncMock) as mock_generate:
         mock_generate.return_value = type('MockResponse', (), {'text': '{"questions": []}'})()
 
         result = await agent.verify_skills({"milestones": [{}]})

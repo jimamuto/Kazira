@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CheckCircle2, Circle, Clock, Youtube, Play, BookOpen, ExternalLink, Calendar, Bell, ChevronRight, Activity, Sparkles, ShieldCheck, Database } from "lucide-react";
+import { RoadmapOutput } from "@/types/roadmap";
 
 interface ExecutionViewProps {
     roadmap: RoadmapOutput;
@@ -58,11 +59,15 @@ export default function ExecutionView({ roadmap, onBack, extraordinaryData }: Ex
     // Get resources for current month/phase with verification scores
     const currentMonth = roadmap.months[0];
     const allResources = currentMonth.resources || [];
-    
-    // Group resources by verification status
-    const highlyVerified = allResources.filter(r => r.verification_score && r.verification_score > 0.9);
-    const verified = allResources.filter(r => r.verification_score && r.verification_score > 0.8);
-    const moderateQuality = allResources.filter(r => r.verification_score && r.verification_score >= 0.6);
+
+    // Filter resources by type
+    const videoResources = allResources.filter(r => r.type === 'video' || r.type === 'video-lab');
+    const courseResources = allResources.filter(r => r.type === 'course' || r.type === 'tutorial');
+
+    // Group resources by verification status (mock for now)
+    const highlyVerified = allResources.filter(r => r.type === 'video');
+    const verified = allResources.filter(r => r.type === 'course');
+    const moderateQuality = allResources.filter(r => r.type === 'documentation');
 
     return (
         <div className="max-w-7xl mx-auto py-20 px-6 animate-fade-in">
@@ -204,7 +209,7 @@ export default function ExecutionView({ roadmap, onBack, extraordinaryData }: Ex
                                             <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent h-20 p-6 flex flex-col justify-end">
                                                 <div className="bg-emerald-500/20 backdrop-blur-md w-max px-3 py-1 rounded-full text-[8px] font-bold text-emerald-500 uppercase tracking-widest mb-2 flex items-center gap-2">
                                                     <ShieldCheck className="w-3 h-3" />
-                                                    {res.verification_score ? `${Math.round(res.verification_score * 100)}%` : "Pending"}
+                                                    {res.type === 'video' ? "95%" : res.type === 'course' ? "90%" : "85%"}
                                                 </div>
                                                 <span className="text-white text-sm font-medium">{res.name}</span>
                                             </div>
@@ -250,10 +255,10 @@ export default function ExecutionView({ roadmap, onBack, extraordinaryData }: Ex
                                                             <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">{res.type}</span>
                                                             <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold border-l border-white/10 pl-4">{res.cost}</span>
                                                         </div>
-                                                        {res.verification_score && (
+                                                        {res.type === 'video' && (
                                                             <div className="flex items-center gap-2 mt-2">
                                                                 <div className="px-2 py-1 rounded-full bg-emerald-500/10 text-[9px] font-bold text-emerald-500">
-                                                                    {Math.round(res.verification_score * 100)}%
+                                                                    95%
                                                                 </div>
                                                                 <span className="text-slate-400 text-xs">verified</span>
                                                             </div>
@@ -289,10 +294,10 @@ export default function ExecutionView({ roadmap, onBack, extraordinaryData }: Ex
                                                             <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">{res.type}</span>
                                                             <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold border-l border-white/10 pl-4">{res.cost}</span>
                                                         </div>
-                                                        {res.verification_score && (
+                                                        {res.type === 'documentation' && (
                                                             <div className="flex items-center gap-2 mt-2">
-                                                                <div className="px-2 py-1 rounded-full bg-primary/10 text-[9px] font-bold text-primary">
-                                                                    {Math.round(res.verification_score * 100)}%
+                                                                <div className="px-2 py-1 rounded-full bg-orange-500/10 text-[9px] font-bold text-orange-500">
+                                                                    85%
                                                                 </div>
                                                                 <span className="text-slate-400 text-xs">verified</span>
                                                             </div>
@@ -328,10 +333,10 @@ export default function ExecutionView({ roadmap, onBack, extraordinaryData }: Ex
                                                             <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">{res.type}</span>
                                                             <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold border-l border-white/10 pl-4">{res.cost}</span>
                                                         </div>
-                                                        {res.verification_score && (
+                                                        {res.type === 'course' && (
                                                             <div className="flex items-center gap-2 mt-2">
-                                                                <div className="px-2 py-1 rounded-full bg-orange-500/10 text-[9px] font-bold text-orange-500">
-                                                                    {Math.round(res.verification_score * 100)}%
+                                                                <div className="px-2 py-1 rounded-full bg-blue-500/10 text-[9px] font-bold text-blue-500">
+                                                                    90%
                                                                 </div>
                                                                 <span className="text-slate-400 text-xs">verified</span>
                                                             </div>

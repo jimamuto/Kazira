@@ -12,11 +12,13 @@ export default function JobsPage() {
     const [hasSearched, setHasSearched] = useState(false);
     const [matchingJob, setMatchingJob] = useState<string | null>(null);
     const [analysisResult, setAnalysisResult] = useState<any>(null);
+    const [suggestions, setSuggestions] = useState<string[]>([]);
+    const [showSuggestions, setShowSuggestions] = useState(false);
 
     const handleSearch = async (e?: React.FormEvent) => {
         if (e) e.preventDefault();
         if (!searchQuery) return;
-
+        setShowSuggestions(false);
         setLoading(true);
         setHasSearched(true);
         try {
@@ -28,6 +30,35 @@ export default function JobsPage() {
         } finally {
             setLoading(false);
         }
+    };
+
+    const fetchSuggestions = async (query: string) => {
+        if (query.length < 2) {
+            setSuggestions([]);
+            setShowSuggestions(false);
+            return;
+        }
+        try {
+            const res = await fetch(`http://localhost:8000/api/jobs/suggestions?q=${encodeURIComponent(query)}&limit=5`);
+            const data = await res.json();
+            setSuggestions(data || []);
+            setShowSuggestions(data && data.length > 0);
+        } catch (err) {
+            console.error("Error fetching suggestions:", err);
+            setSuggestions([]);
+        }
+    };
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value;
+        setSearchQuery(value);
+        fetchSuggestions(value);
+    };
+
+    const selectSuggestion = (suggestion: string) => {
+        setSearchQuery(suggestion);
+        setShowSuggestions(false);
+        handleSearch();
     };
 
     const CATEGORIES = ["All", "Engineering", "Data & AI", "Product", "Contract"];
@@ -77,14 +108,32 @@ export default function JobsPage() {
                         Enter your dream role below. Our Research Agent will scan the Kenyan tech ecosystem and global remote markets to find the perfect fit.
                     </p>
 
-                    <form onSubmit={handleSearch} className="flex gap-4 w-full max-w-2xl bg-white/5 p-4 rounded-[40px] border border-white/10 shadow-2xl">
-                        <input
-                            type="text"
-                            placeholder="e.g. Senior Frontend Engineer, Data Scientist at Safaricom..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            className="flex-1 bg-transparent px-8 py-4 text-lg text-white focus:outline-none placeholder:text-slate-600"
-                        />
+                    <form onSubmit={handleSearch} className="flex gap-4 w-full max-w-2xl bg-white/5 p-4 rounded-[40px] border border-white/10 shadow-2xl relative">
+                        <div className="flex-1 relative">
+                            <input
+                                type="text"
+                                placeholder="e.g. Senior Frontend Engineer, Data Scientist at Safaricom..."
+                                value={searchQuery}
+                                onChange={handleInputChange}
+                                onFocus={() => setShowSuggestions(suggestions.length > 0)}
+                                onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
+                                className="w-full bg-transparent px-8 py-4 text-lg text-white focus:outline-none placeholder:text-slate-600"
+                            />
+                            {showSuggestions && suggestions.length > 0 && (
+                                <div className="absolute top-full left-0 right-0 mt-2 bg-slate-900/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden z-50">
+                                    {suggestions.map((suggestion, idx) => (
+                                        <button
+                                            key={idx}
+                                            type="button"
+                                            onClick={() => selectSuggestion(suggestion)}
+                                            className="w-full px-6 py-3 text-left text-white hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
+                                        >
+                                            <span className="text-sm">{suggestion}</span>
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                         <button
                             type="submit"
                             disabled={loading}
@@ -107,14 +156,32 @@ export default function JobsPage() {
                                 Analyzing {jobs.length} relevant roles synthesized by our autonomous market worker.
                             </p>
 
-                            <form onSubmit={handleSearch} className="flex gap-4 max-w-md">
-                                <input
-                                    type="text"
-                                    placeholder="Search another role..."
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-3 text-sm focus:border-primary/50 outline-none transition-all"
-                                />
+                            <form onSubmit={handleSearch} className="flex gap-4 max-w-md relative">
+                                <div className="flex-1 relative">
+                                    <input
+                                        type="text"
+                                        placeholder="Search another role..."
+                                        value={searchQuery}
+                                        onChange={handleInputChange}
+                                        onFocus={() => setShowSuggestions(suggestions.length > 0)}
+                                        onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
+                                        className="flex-1 w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 text-sm focus:border-primary/50 outline-none transition-all"
+                                    />
+                                    {showSuggestions && suggestions.length > 0 && (
+                                        <div className="absolute top-full left-0 right-0 mt-2 bg-slate-900/95 backdrop-blur-xl rounded-xl border border-white/10 shadow-2xl overflow-hidden z-50">
+                                            {suggestions.map((suggestion, idx) => (
+                                                <button
+                                                    key={idx}
+                                                    type="button"
+                                                    onClick={() => selectSuggestion(suggestion)}
+                                                    className="w-full px-4 py-2 text-left text-white text-xs hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
+                                                >
+                                                    {suggestion}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
                                 <button
                                     type="submit"
                                     disabled={loading}

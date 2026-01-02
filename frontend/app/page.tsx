@@ -27,7 +27,7 @@ export default function Home() {
         </h1>
 
         <p className="text-muted max-w-2xl mx-auto mb-20 leading-relaxed font-light text-slate-300 text-lg">
-          Kazira is an autonomous career planning marathon agent powered by Google's Gemini 3 Flash Preview.
+          Kazira is an autonomous career planning marathon agent powered by Google's Gemini 3.0 Flash Preview.
           It runs continuously for 72+ hours without human supervision, performing real-time job market research,
           strategic roadmap planning, resource discovery, and autonomous code verification.
         </p>
@@ -74,7 +74,7 @@ export default function Home() {
         <div className="text-center mb-24">
           <h2 className="text-5xl font-medium tracking-tight mb-6">72-Hour Marathon Agent.</h2>
           <p className="text-muted max-w-2xl mx-auto text-lg font-light leading-relaxed">
-            Our multi-agent system powered by Gemini 3 Flash Preview runs continuously for 72+ hours,
+            Our multi-agent system powered by Gemini 3.0 Flash Preview runs continuously for 72+ hours,
             executing in 30-minute cycles with autonomous agent negotiation and self-correction.
           </p>
         </div>

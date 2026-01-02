@@ -71,7 +71,7 @@ class ExecutionAgent:
         """
         
         try:
-            response = await gemini_client.model.generate_content_async(prompt, generation_config={"response_mime_type": "application/json"})
+            response = await gemini_client.generate_content_async(prompt, generation_config={"response_mime_type": "application/json"})
             return json.loads(response.text)
         except Exception as e:
             logging.error(f"Schedule generation failed: {e}")
@@ -88,7 +88,7 @@ class ExecutionAgent:
         
         prompt = f"For the milestone '{milestone['title']}' focusing on {milestone['focus']}, list 3 specific resource search terms for YouTube/Coursera. Return ONLY JSON list of objects with 'name' and 'platform'."
         try:
-            response = await gemini_client.model.generate_content_async(prompt, generation_config={"response_mime_type": "application/json"})
+            response = await gemini_client.generate_content_async(prompt, generation_config={"response_mime_type": "application/json"})
             return json.loads(response.text)
         except Exception as e:
             logging.error(f"Failed to get resource suggestions: {e}")

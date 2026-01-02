@@ -3,7 +3,7 @@ uvicorn
 pydantic
 pydantic-settings
 sqlmodel
-google-generativeai>=0.8.0
+google-genai
 python-dotenv
 httpx
 selenium
@@ -11,4 +11,8 @@ webdriver-manager
 beautifulsoup4
 pytest
 pytest-asyncio
+pytest-cov
+pytest-mock
+aiosqlite
 requests
+python-multipart

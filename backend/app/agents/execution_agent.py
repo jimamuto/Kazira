@@ -26,12 +26,15 @@ class ExecutionAgent:
         """
         Iterates through roadmap milestones and identifies specific resource types and search paths.
         """
-        logging.info("Searching for specialized resources...")
-        
+        logging.info("🔍 Searching for specialized resources...")
+        logging.debug(f"Resource search input: roadmap_keys={list(roadmap.keys())}")
+
         milestones = roadmap.get("milestones", [])
         all_resources = []
-        
+        logging.debug(f"Processing {len(milestones)} milestones")
+
         for milestone in milestones:
+            logging.debug(f"Finding resources for milestone: {milestone.get('title', 'Unknown')}")
             # We use Gemini to suggest the best specific search strings or resource names
             # In a full system, this would trigger a SERP API call
             suggestion = await self._get_resource_suggestions(milestone)
@@ -39,15 +42,19 @@ class ExecutionAgent:
                 "milestone": milestone["title"],
                 "suggestions": suggestion
             })
-            
+
+        logging.info(f"✅ Resource search completed: {len(all_resources)} milestone resources found")
         return all_resources
     
     async def generate_schedule(self, roadmap: Dict[str, Any], hours_per_week: int = 15, constraints: List[str] = []) -> Dict[str, Any]:
         """
         Generates a 4-week daily task schedule based on first few milestones.
         """
-        logging.info(f"Generating 4-week learning schedule with {hours_per_week} hrs/week...")
+        logging.info(f"📅 Generating 4-week learning schedule with {hours_per_week} hrs/week...")
+        logging.debug(f"Schedule config: hours_per_week={hours_per_week}, constraints={constraints}")
+
         milestones = roadmap.get("months", [])[:2] # Look at first two milestones
+        logging.debug(f"Using {len(milestones)} milestones for schedule generation")
         
         if gemini_client is None:
             logging.warning("gemini_client not available, cannot generate schedule")
@@ -71,7 +78,7 @@ class ExecutionAgent:
         """
         
         try:
-            response = await gemini_client.model.generate_content_async(prompt, generation_config={"response_mime_type": "application/json"})
+            response = await gemini_client.generate_content_async(prompt, generation_config={"response_mime_type": "application/json"})
             return json.loads(response.text)
         except Exception as e:
             logging.error(f"Schedule generation failed: {e}")
@@ -88,7 +95,7 @@ class ExecutionAgent:
         
         prompt = f"For the milestone '{milestone['title']}' focusing on {milestone['focus']}, list 3 specific resource search terms for YouTube/Coursera. Return ONLY JSON list of objects with 'name' and 'platform'."
         try:
-            response = await gemini_client.model.generate_content_async(prompt, generation_config={"response_mime_type": "application/json"})
+            response = await gemini_client.generate_content_async(prompt, generation_config={"response_mime_type": "application/json"})
             return json.loads(response.text)
         except Exception as e:
             logging.error(f"Failed to get resource suggestions: {e}")

@@ -82,20 +82,11 @@ class MissionControl:
         self.log_event("RESEARCH_AGENT", "Scraping LinkedIn & Indeed [background_mode]...")
         
         # In a real app, we'd call the actual scrapers here.
-        # For the hackathon "Marathon" demo, we'll simulate a finding periodically.
+        # For the hackathon "Marathon" demo, we rely on the Orchestrator to push real events.
         
-        import random
-        if random.random() > 0.7: # 30% chance to find something new
-            self.trigger_adaptation()
-        else:
-            self.log_event("ANALYSIS", "No significant market shifts detected. Maintaining current roadmap.")
-
+        # Log system heartbeat instead of fake data
+        self.log_event("SYSTEM", "Heartbeat: Autonomous agents active. Monitoring event bus...")
+        
     def trigger_adaptation(self):
-        emerging_skills = ["Qdrant", "CrewAI", "LangGraph", "Supabase Edge Functions"]
-        new_skill = random.choice(emerging_skills)
-        
-        self.log_event("ALERT", f"Detected emerging skill spike: '{new_skill}' (+240% DoD)")
-        self.log_event("PLANNING_AGENT", f"Calculating impact on existing roadmap...")
-        self.log_event("DECISION", f"Auto-injecting module '{new_skill}' into Phase 3.")
-        
-        # Here we would actually update the User's Roadmap object in DB
+        # Triggered by REAL Orchestrator events only
+        pass
